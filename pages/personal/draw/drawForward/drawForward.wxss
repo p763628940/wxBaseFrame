@@ -1,0 +1,145 @@
+.top_banner {
+  width: 750rpx;
+  height: 190rpx;
+  background: url("https://xiaoaires.aibao.com/commissionReturn/personal/pb_draw_banner.png") no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: space-between;
+}
+
+.banner_left {
+  margin-left: 40rpx;
+}
+
+.score_tit {
+  font-size: 28rpx;
+  color: rgba(194, 197, 255, 1);
+  line-height: 40rpx;
+}
+
+.score_num {
+  font-size: 60rpx;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 1);
+  line-height: 84rpx;
+}
+
+.banner_right {
+  width: 140rpx;
+  height: 60rpx;
+  background: rgba(255, 255, 255, 0.21);
+  border-radius: 30rpx;
+  border: 1rpx solid #c2c5ff;
+  font-size: 26rpx;
+  color: #fff;
+  line-height: 60rpx;
+  text-align: center;
+  margin-right: 40rpx;
+}
+
+.score_con {
+  width: 100%;
+  height: auto;
+}
+
+.score_con_p {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  margin: 22rpx 40rpx;
+}
+
+.score_con_p view {
+  font-size: 26rpx;
+  color: rgba(102, 102, 102, 1);
+}
+
+.score_con_p .score_con_span {
+  font-size: 26rpx;
+  color: #ff801a;
+}
+
+/* ------公用模态弹框--------- */
+
+.modal_mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.5;
+  overflow: hidden;
+  z-index: 9000;
+  color: #fff;
+}
+
+.modal_dialog {
+  width: 540rpx;
+  /* min-height: 328rpx; */
+  overflow: hidden;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 9999;
+  background: #f9f9f9;
+  margin: -164rpx -270rpx;
+  border-radius: 20rpx;
+}
+
+.modal_title {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: rgba(51, 51, 51, 1);
+  line-height: 50rpx;
+  letter-spacing: 1rpx;
+  text-align: center;
+  padding-top: 36rpx;
+}
+
+.modal_con {
+  font-size: 28rpx;
+  color: rgba(51, 51, 51, 1);
+  line-height: 48rpx;
+  text-align: center;
+  padding: 30rpx 36rpx 26rpx 36rpx;
+  display: block;
+}
+
+.modal_footer {
+  width: 540rpx;
+  display: flex;
+  /* flex-direction: row; */
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  height: 90rpx;
+  border-top: 1rpx solid #e5e5e5;
+  font-size: 32rpx;
+  line-height: 90rpx;
+}
+
+.modal_footer>view {
+  flex: 1;
+  text-align: center;
+  font-size: 32rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn_cancel {
+  /* width: 50%; */
+  color: #666;
+  border-right: 1rpx solid #dedede;
+}
+
+.btn_confirm {
+  /* width: 50%; */
+  color: #4b8dfa;
+}
+.color_orange{
+  color: #ff801a;
+}

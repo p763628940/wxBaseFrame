@@ -1,0 +1,172 @@
+page {
+  background: rgba(247, 247, 247, 1);
+}
+
+.bank_top {
+  width: 670rpx;
+  display: -webkit-box;
+  -webkit-box-pack: justify;
+  -webkit-box-align: center;
+  padding: 38rpx 40rpx 32rpx;
+  background: #fff;
+  margin-bottom: 20rpx;
+  border-top: 1rpx solid #e5e5e5;
+}
+
+.bank_top_left {
+  display: flex;
+  align-items: center;
+}
+
+.bank_logo {
+  width: 60rpx;
+  height: 60rpx;
+  background: rgba(255, 255, 255, 1);
+  border: 1rpx solid red;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.bank_logo image {
+  width: 60rpx;
+  height: 60rpx;
+  display: inline-block;
+}
+
+.bank_name {
+  display: flex;
+  align-items: center;
+}
+
+.bank_name view {
+  font-size: 32rpx;
+  color: rgba(51, 51, 51, 1);
+  line-height: 32rpx;
+  margin-left: 30rpx;
+}
+
+.bank_top_right {
+  display: flex;
+  align-items: center;
+}
+
+.bank_top_right view {
+  font-size: 26rpx;
+  color: #4b8dfa;
+  line-height: 37rpx;
+  margin-right: 18rpx;
+}
+
+.bank_top_right image {
+  width: 13rpx;
+  height: 26rpx;
+  vertical-align: middle;
+}
+
+/* 提现金额 */
+
+.bank_con {
+  width: 670rpx;
+  height: auto;
+  background: #fff;
+  padding: 60rpx 40rpx 30rpx;
+}
+
+.bank_tit {
+  font-size: 34rpx;
+  font-weight: bold;
+  color: #333;
+  line-height: 32rpx;
+}
+
+.bank_form {
+  margin-top: 48rpx;
+}
+
+.bank_li {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border-bottom: 1rpx solid #e5e5e5;
+  padding-bottom: 22rpx;
+}
+
+.li_tit {
+  font-size: 44rpx;
+  font-weight: 600;
+  color: #333;
+  line-height: 62rpx;
+  margin-right: 33rpx;
+}
+
+.li_input {
+  width: 90%;
+  font-size: 60rpx;
+  color: #333;
+}
+
+.li_input input {
+  width: 100%;
+  font-size: 60rpx;
+  font-weight: bold;
+  color: #333;
+  height: 84rpx;
+  min-height: 84rpx;
+  line-height: 84rpx;
+  overflow: initial;
+}
+
+.bank_money {
+  display: flex;
+  align-items: center;
+  padding: 30rpx 0;
+}
+
+.bank_money_p {
+  font-size: 28rpx;
+  color: #999;
+  line-height: 40rpx;
+  display: flex;
+  align-items: center;
+}
+
+.bank_money_span {
+  color: #ff7b00;
+}
+
+.bank_money button {
+  line-height: 40rpx;
+  font-size: 28rpx;
+  color: #4b8dfa;
+  margin-left: 50rpx;
+  background: none;
+  border: 0;
+  border-radius: 0;
+  padding: 0;
+}
+
+/*  */
+
+.btn_rule {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  padding: 30rpx 0;
+  text-align: center;
+}
+
+.rule_p {
+  font-size: 26rpx;
+  color: #999;
+  line-height: 37rpx;
+}
+
+.rule_span {
+  color: #4b8dfa;
+  font-size: 26rpx;
+  line-height: 37rpx;
+}
+
+/* 密码弹窗 */
+@import '/components/password/password';

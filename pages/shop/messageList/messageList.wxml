@@ -1,0 +1,51 @@
+<view class="messagebox">
+    <view class="use_box">
+        <view class="messagetit">
+            <view class="messagetitl">
+                <image src="{{m_icon}}" class="titl_icon1"></image>
+                <view class="titl_icon1_text">累计收入{{totalRevenue}}元</view>
+            </view>
+            <view class="messagetitr">
+                <image src="{{Fill}}" class="titl_icon2"></image>
+                <picker bindchange="bindPickerChange" value="{{index}}" range-key="name" range="{{timeList}}">
+                    <view class="titl_icon2_text">
+                        {{timeList[index].name}}</view>
+                </picker>
+            </view>
+        </view>
+        <view class="bg"></view>
+    </view>
+
+    <view class="message_con">
+        <scroll-view
+                scroll-y
+                style="height:{{windowsHeight}}px;"
+                bindscrolltolower="getListData"
+                bindscroll="scroll"
+                scroll-into-view="{{toView}}"
+                scroll-top="{{scrollTop}}"
+        >
+            <view class="message_item"
+                  wx:for="{{shopList}}"
+                  wx:for-index="idx"
+                  wx:key="idx">
+                <view class="ms_item_tit">
+                    <div class="ms_item_titl_text" wx:if="{{item.type=='spread'}}">推广奖励</div>
+                    <div class="ms_item_titl_text" wx:if="{{item.type=='invite'}}">邀请奖励</div>
+                    <div class="ms_item_titl_text" wx:if="{{item.type=='platform'}}">平台消息</div>
+                    <view class="ms_item_titr" wx:if="{{item.readStatus!=1}}"></view>
+                </view>
+                <view class="ms_item_con">
+                    <image src="{{item.imageUrl}}" class="ms_item_conl"></image>
+                    <view class="ms_item_conr">{{item.messageContent}}</view>
+                </view>
+                <view class="time">
+                    <view class="timel">{{item.createTime}}</view>
+                    <view class="timer"> <text wx:if="{{item.cash>0}}">+</text>{{item.cash}}元</view>
+                </view>
+            </view>
+            <view class="notmore" wx:if="{{!hasMore}}">没有更多了</view>
+        </scroll-view>
+
+    </view>
+</view>

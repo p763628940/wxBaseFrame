@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "customer": "/components/customer/customer"
+  },
+  "navigationBarTitleText": "专业资质会员"
+}

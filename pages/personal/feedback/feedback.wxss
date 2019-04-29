@@ -1,0 +1,90 @@
+page {
+  background: #f9f9f9;
+}
+
+.container {
+  width: 100%;
+  height: auto;
+  padding: 0;
+}
+
+form {
+  width: 690rpx;
+}
+
+.feedback_con {
+  position: relative;
+}
+
+textarea {
+  width: 664rpx;
+  height: 384rpx;
+  background: #fff;
+  border: 1rpx solid #d3d3d3;
+  border-radius: 6rpx;
+  padding: 18rpx 13rpx;
+  font-size: 30rpx;
+  color: #333;
+  margin: 30rpx auto 0;
+}
+
+.placeholder {
+  color: #999;
+}
+
+.feedback_con .p {
+  position: absolute;
+  bottom: 20rpx;
+  right: 30rpx;
+  font-size: 28rpx;
+  color: #999;
+  display: inline-flex;
+  align-content: center;
+}
+
+input {
+  height: 90rpx;
+  background: #fff;
+  border: 1rpx solid #d3d3d3;
+  border-radius: 6rpx;
+  padding: 0 30rpx;
+  font-size: 30rpx;
+  color: #333;
+  margin: 30rpx auto 0;
+}
+
+button {
+  height: 108rpx;
+  line-height: 108rpx;
+  background: #5458ff;
+  border-radius: 100rpx;
+  overflow: hidden;
+  font-size: 32rpx;
+  color: #fff;
+  text-align: center;
+  margin: 50rpx auto 0;
+  font-weight: bold;
+}
+
+button::after {
+  border: none;
+  border-radius: none;
+}
+
+.dialing {
+  font-size: 28rpx;
+  color: #999;
+  line-height: 26rpx;
+  text-align: center;
+  margin-top: 40rpx;
+}
+
+.dialing>view {
+  display: inline-block;
+  color: #4b8dfa;
+  text-decoration: underline;
+}
+
+.colorBlue {
+  color: #4b8dfa;
+}

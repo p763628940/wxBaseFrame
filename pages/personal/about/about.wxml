@@ -1,0 +1,48 @@
+<view class='container'>
+  <view class='con'>
+    <view class='image'>
+      <image src='{{logo}}'></image>
+    </view>
+    <view class='h1'>小爱医生</view>
+    <view class='p'>为您提供足不出户的在线医疗服务</view>
+    <view class='msg'>小爱医生是爱保科技于2018年6月推出的在线医疗服务平台，我们致力于整合链接最优秀的医疗资源，为用户提供视频医生、专家绿通、医护到家等全流程在线医疗服务。真正实现“就医足不出户”。</view>
+  </view>
+  <view class='con2'>
+    <view class='h1'>战略股东
+      <image src='{{tit}}'></image>
+    </view>
+    <view class='ul'>
+      <view class='li'>
+        <image src='{{c1}}'></image>
+      </view>
+      <view class='li'>
+        <image src='{{c2}}'></image>
+      </view>
+    </view>
+    <view class='ul'>
+      <view class='li'>
+        <image src='{{c3}}'></image>
+      </view>
+      <view class='li'>
+        <image src='{{c4}}'></image>
+      </view>
+    </view>
+  </view>
+  <view class='con3'>
+    <view class='h1'>联系我们
+      <image src='{{tit}}'></image>
+    </view>
+    <view class='ul'>
+      <view class='li'>客服电话：
+        <view bindtap='dialingClick'>010-87152976</view></view>
+      <view class='li'>微信公众号：小爱保（aiinsurance）</view>
+    </view>
+    <view class='ol'>
+      <image src='{{wxCode}}' bindtap="previewImage" data-src="{{wxCode}}"></image>
+      <view class='p'>
+        <view>搜索“小爱保” </view>
+        <view>或扫描二维码关注公众号</view>
+      </view>
+    </view>
+  </view>
+</view>

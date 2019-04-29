@@ -1,0 +1,85 @@
+<view class="container">
+  <view class="revenue_top">
+    <view class='revenue_top_ul'>
+      <view class="revenue_top_li {{revenueOn==1?'active':''}}">
+        <picker mode="multiSelector" value="{{dateTime}}" bindchange="changeDateTime" range="{{dateTimeArray}}">
+          <view class="revenue_picker">
+            {{awardTime}}
+          </view>
+        </picker>
+        <image src='{{dowm}}'></image>
+        <view class='revenue_top_span'></view>
+      </view>
+      <view class="revenue_top_li {{revenueOn==2?'active':''}}">
+        <picker bindchange="bindApproveChange" value="{{approveStatusValue}}" range="{{approveStatusList}}">
+          <view class="revenue_picker">
+            {{approveStatusList[approveStatusValue]}}
+          </view>
+        </picker>
+        <image src='{{dowm}}'></image>
+        <view class='revenue_top_span'></view>
+      </view>
+      <view class="revenue_top_li {{revenueOn==3?'active':''}}">
+        <picker bindchange="bindAwardChange" value="{{awardTypeValue}}" range="{{awardTypeList}}">
+          <view class="revenue_picker">
+            {{awardTypeList[awardTypeValue]}}
+          </view>
+        </picker>
+        <image src='{{dowm}}'></image>
+        <view class='revenue_top_span'></view>
+      </view>
+    </view>
+  </view>
+  <!--  -->
+  <view class="revenue_total">累计收入：{{tableList.totalFee}}元</view>
+  <scroll-view class='scroll_con' scroll-y style='height:{{scrollHeight}}px' bindscrolltolower="scrollLower" scroll-with-animation='true'>
+    <view class="revenue_list" wx:if='{{dataList.length!=0}}'>
+      <view class='revenue_list_ul'>
+        <view class='revenue_list_li' wx:for='{{dataList}}' wx:for-item="item" wx:for-index="index" wx:key="index">
+          <view class="color_block"></view>
+          <view class="list_top">
+            <view class="list_top_left">
+              <view class='list_tit'>{{item.productName}}</view>
+              <view class='list_p'>{{item.feeStartDate}}</view>
+            </view>
+            <view class="list_top_right">
+              <view class="revenue_price" wx:if="{{item.approveStatus!=3}}">+{{item.cash}}元</view>
+              <view class="revenue_price" wx:else>{{item.cash}}元</view>
+              <view class="revenue_status {{item.approveStatus==1?'blue_status':''}} {{item.approveStatus==3?'red_status':''}}">{{item.approveStatusName}}</view>
+            </view>
+          </view>
+          <view class="list_bottom">
+            <view>
+              <view class='list_bottom_p'>金额：</view>
+              <view class='list_bottom_span'>{{item.premium}}元</view>
+            </view>
+            <view>
+              <view class='list_bottom_p'>推广人：</view>
+              <view class='list_bottom_span'>{{item.idName}}</view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class='no_product' wx:if='{{loadingDom}}'>
+        <view class="loader">
+          <view class="loader-inner ball-spin-fade-loader">
+            <view></view>
+            <view></view>
+            <view></view>
+            <view></view>
+            <view></view>
+            <view></view>
+            <view></view>
+            <view></view>
+          </view>
+        </view>
+        <view>加载中</view>
+      </view>
+      <view class='no_product' wx:if='{{noMoreShow}}'>没有更多数据了</view>
+    </view>
+    <view class="draw_null" wx:else>
+      <image src='{{empty}}'></image>
+      <view>还没有获得奖励，要加油了</view>
+    </view>
+  </scroll-view>
+</view>

@@ -1,0 +1,62 @@
+{
+  "pages": [
+    "pages/shop/home/home",
+    "pages/shop/inviteIfo/inviteIfo",
+    "pages/shop/details/details",
+    "pages/shop/customerInfoUp/customerInfoUp",
+    "pages/shop/inviteMiddle/inviteMiddle",
+    "pages/shop/inviteRoule/inviteRoule",
+    "pages/personal/draw/drawRule/drawRule",
+    "pages/personal/basic/basicLogin/basicLogin",
+    "pages/shop/inviteAward/inviteAward",
+    "pages/personal/basic/basicInfo/basicInfo",
+    "pages/personal/basic/basicCert/certAuthorize/certAuthorize",
+    "pages/personal/draw/drawSchedule/drawSchedule",
+    "pages/personal/draw/drawBank/drawBank",
+    "pages/personal/draw/drawRecord/drawRecord",
+    "pages/personal/draw/drawForward/drawForward",
+    "pages/personal/revenue/revenue",
+    "pages/personal/setCenter/setCenter",
+    "pages/personal/basic/basicCert/certCard/certCard",
+    "pages/personal/basic/basicHead/basicHead",
+    "pages/personal/basic/basicPassword/basicPassword",
+    "pages/personal/basic/basicBankList/basicBankList",
+    "pages/personal/basic/basicBank/basicBank",
+    "pages/personal/basic/basicCert/certIntroduce/certIntroduce",
+    "pages/personal/basic/basicCert/certStatus/certStatus",
+    "pages/personal/basic/basicCert/certFrom/certFrom",
+    "pages/personal/basic/basicPhoneReset/basicPhoneReset",
+    "pages/personal/basic/basicPhoneBind/basicPhoneBind",
+    "pages/personal/basic/basicPhone/basicPhone",
+    "pages/personal/basic/basicMail/basicMail",
+    "pages/personal/basic/basicName/basicName",
+    "pages/personal/feedback/feedback",
+    "pages/personal/basic/basicPrivacy/basicPrivacy",
+    "pages/personal/basic/basicPlatform/basicPlatform",
+    "pages/personal/about/about",
+    "pages/shop/invite/invite",
+    "pages/shop/customerManage/customerManage",
+    "pages/shop/customerInfo/customerInfo",
+    "pages/shop/makeMonye/makeMonye",
+    "pages/shop/messageList/messageList",
+    "pages/shop/login/login",
+    "pages/shop/country/country",
+    "pages/shop/payOk/payOk",
+    "pages/shop/cardPay/cardPay",
+    "components/agreement/agreement"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "",
+    "navigationBarTextStyle": "black"
+  },
+  "navigateToMiniProgramAppIdList": [
+    "wxfdb569c2d4323535"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "需要获取您的地理位置，请确认授权"
+    }
+  }
+}

@@ -1,0 +1,212 @@
+<view class="box">
+    <view class="box_min">
+        <view class="top_tab">
+            <view class=" {{crrrentTab==2?'active_tab_item':'tab_item'}}" bindtap="setCrrrentTab" data-tabid="2">邀请好友
+                <view class=" active_under" wx:if="{{crrrentTab==2}}"></view>
+            </view>
+            <view class="tab_item" class=" {{crrrentTab==1?'active_tab_item':'tab_item'}}" bindtap="setCrrrentTab"
+                  data-tabid="1">奖励明细
+                <view class="active_under" wx:if="{{crrrentTab==1}}"></view>
+            </view>
+
+        </view>
+        <view class="bg"></view>
+        <view class="messagetit" wx:if="{{crrrentTab==1}}">
+            <view class="messagetitl">
+                <image src="{{m_icon}}" class="titl_icon1"></image>
+                <view class="titl_icon1_text">累计收入{{totalFee}}元</view>
+            </view>
+            <view class="messagetitr" bindtap="setFlitter">
+                <image src="{{Fill}}" class="titl_icon2"></image>
+                <view class="titl_icon2_text">筛选</view>
+            </view>
+        </view>
+        <view class="messagetit" wx:if="{{crrrentTab==2}}">
+            <view class="messagetitl">
+                <image src="{{people_icon}}" class="titl_icon1"></image>
+                <view class="titl_icon1_text">邀请好友共{{totalRow}}人</view>
+            </view>
+            <view class="messagetitr" bindtap="setFlitter">
+                <image src="{{Fill}}" class="titl_icon2"></image>
+                <view class="titl_icon2_text">筛选</view>
+            </view>
+        </view>
+    </view>
+    <view class="list" wx:if="{{crrrentTab==1}}">
+        <scroll-view
+                scroll-y
+                style="height:{{windowsHeight}}px;"
+                bindscrolltolower="getInviteAwardList"
+                bindscroll="scroll"
+                scroll-into-view="{{toView}}"
+                scroll-top="{{scrollTop}}"
+                wx:if="{{awardList.length>0}}"
+        >
+            <view class="item"
+                  wx:for="{{awardList}}"
+                  wx:for-index="idx"
+                  wx:key="idx">
+                <view class="item_title">
+                    <view class="item_titlel">{{item.idName}}</view>
+                    <view class="item_titler">
+                        <view class="item_titlert">+{{item.cash}}元</view>
+                        <view class="item_titlerb" wx:if="{{item.approveStatus==1}}">结算中</view>
+                        <view class="item_titlerb" wx:if="{{item.approveStatus==2}}">已结算</view>
+                        <view class="item_titlerb" wx:if="{{item.approveStatus==3}}">扣回</view>
+
+                    </view>
+                </view>
+                <view class="item_con">
+                    <view class="item_con_item">
+                        <view class="item_con_iteml">产品 ：</view>
+                        <view class="item_con_itemr">{{item.productName}}</view>
+                    </view>
+                    <view class="item_con_item">
+
+                        <view class="item_con_iteml">金额 ：</view>
+                        <view class="item_con_itemr">{{item.premium}}元</view>
+                    </view>
+                    <view class="item_con_item">
+                        <view class="item_con_iteml">时间 ：</view>
+                        <view class="item_con_itemr">{{item.feeStartDate}}</view>
+                    </view>
+                </view>
+            </view>
+        </scroll-view>
+
+        <view class="nodata_my" wx:if="{{awardList.length<=0}}">
+            <image src="{{no_darta_my}}" class="nodata_my_img"></image>
+        </view>
+        <view class="no_data_my_text" wx:if="{{awardList.length<=0}}">
+            暂未获得奖励快去邀请好友出单吧
+        </view>
+    </view>
+    <view class="friendList" wx:if="{{crrrentTab==2}}">
+
+        <scroll-view
+                scroll-y
+                style="height:{{windowsHeight}}px;"
+                bindscrolltolower="getInviteFriedList"
+                bindscroll="scroll"
+                scroll-into-view="{{toView}}"
+                scroll-top="{{scrollTop}}"
+                wx:if="{{friendList.length>0}}"
+        >
+            <view class="friendList_item"
+                  wx:for="{{friendList}}"
+                  wx:for-index="idx"
+                  wx:key="idx"
+                  bindtap="moveToIfo"
+                  data-friendid="{{item.friendUserId}}"
+            >
+
+                <view class="friendList_item_t">
+                    <view class="friendList_item_t1">
+                        <view class="friendList_item_t1l">{{item.idName}}</view>
+                        <view class="friendList_item_t1r">{{item.createTime}}加入</view>
+                    </view>
+                    <view class="friendList_item_t2">
+                        <view class="tabf"wx:if="{{item.mobile}}">已激活</view>
+                        <view class="tabf_an" wx:if="{{!item.mobile}}">未激活</view>
+                        <view class="tabf" wx:if="{{item.certStatus==20||item.certStatus==10}}">{{item.certStatusName}}</view>
+                        <view class="tabf_an"  wx:if="{{item.certStatus!=20&&item.certStatus!=10}}">{{item.certStatusName}}</view>
+
+                    </view>
+                </view>
+                <view class="friendList_item_b">
+                    <view class="friendList_item_b_item">
+                        <view class="friendList_item_b_iteml">推广单数：</view>
+                        <view class="friendList_item_b_itemr">{{item.tuiGuang}}单</view>
+                    </view>
+                    <view class="friendList_item_b_item">
+                        <view class="friendList_item_b_iteml">累积贡献：</view>
+                        <view class="friendList_item_b_itemr">{{item.contribution}}元</view>
+                    </view>
+                </view>
+            </view>
+        </scroll-view>
+
+        <view class="nodatafriend" wx:if="{{friendList.length<=0}}">
+            <image src="{{nofriend}}" class="nodatafriend_img"></image>
+            <view class="nodatafriend_text">暂未邀请任何好友，快去邀请好友吧</view>
+
+        </view>
+    </view>
+    <view class="flit" wx:if="{{canFlitter}}">
+        <view class="flit_box">
+            <view class="flit_box_inner">
+                <view class="flit_top">
+                    筛选
+                    <image src="{{close}}" class="close" bindtap="close"></image>
+                </view>
+                <view class="timeselect">
+                    <view class="timeselect_tit">时间</view>
+                    <view class="timeselect_item_con">
+                        <view
+                                class="{{timeSelect==idx?' timeselect_itemac timeselect':'timeselect_item timeselect'}}"
+                                wx:for="{{timeList}}"
+                                wx:for-index="idx"
+                                wx:key="idx"
+                                wx:if="{{crrrentTab==1}}"
+                                data-timeindex="{{idx}}"
+                                bindtap="settimeSelect"
+                        >{{item}}
+                        </view>
+                        <view
+                                class="{{timeSelect1==idx?' timeselect_itemac timeselect':'timeselect_item timeselect'}}"
+                                wx:for="{{timeList}}"
+                                wx:for-index="idx"
+                                wx:key="idx"
+                                wx:if="{{crrrentTab==2}}"
+                                data-timeindex="{{idx}}"
+                                bindtap="settimeSelect1"
+                        >{{item}}
+                        </view>
+
+                    </view>
+                </view>
+                <view class="typeselect">
+                    <view class="timeselect_tit" wx:if="{{crrrentTab==2}}">类型</view>
+                    <div class="typeselect_box" wx:if="{{crrrentTab==10}}">
+                        <view class="timeselect_items timeselect_item"
+                              data-userdata=""
+                              bindtap="setAwType"
+                              class="{{awardType==''?' timeselect_itemac timeselect':'timeselect_item timeselect'}}"
+                        >全部奖励
+                        </view>
+                        <view class="timeselect_items timeselect_item"
+                              bindtap="setAwType"
+                              data-userdata="Friends"
+                              class="{{awardType=='Friends'?' timeselect_itemac timeselect':'timeselect_item timeselect'}}"
+                        >出单奖励
+                        </view>
+                    </div>
+                    <div class="typeselect_box" wx:if="{{crrrentTab==2}}">
+                        <view class="timeselect_items timeselect_item"
+                              data-userdata=""
+                              bindtap="setFType"
+                              class="{{friendType==''?' timeselect_itemac timeselect':'timeselect_item timeselect'}}"
+                        >所有好友
+                        </view>
+                        <view class="timeselect_items timeselect_item"
+
+                              data-userdata="POLICY"
+                              bindtap="setFType"
+                              class="{{friendType=='POLICY'?' timeselect_itemac timeselect':'timeselect_item timeselect'}}"
+                        >出单好友
+                        </view>
+                    </div>
+
+                </view>
+
+            </view>
+            <view class="flit_btn">
+                <view class="flit_btn_item1" bindtap="rest">重置</view>
+
+                <view class="flit_btn_item2" bindtap="selectTime">确定</view>
+            </view>
+
+        </view>
+
+    </view>
+</view>

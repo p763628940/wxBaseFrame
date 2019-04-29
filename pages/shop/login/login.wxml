@@ -1,0 +1,9 @@
+<view class='container'>
+  <view class='banner'>
+    <view class='banner_font'>
+      <image src='{{banner}}'></image>
+    </view>
+  </view>
+  <!--  -->
+  <login-control area-code='{{areaCode}}' btn-text='{{btnText}}' bind:mylogin="myLoginValue"></login-control>
+</view>

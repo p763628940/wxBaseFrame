@@ -1,0 +1,30 @@
+<view class='container'>
+  <view class='introduce_tit'>
+    <view class='tit_h'>如何获得专业资质会员？</view>
+    <view class='tit_span'></view>
+  </view>
+  <!--  -->
+  <view class='introduce_list'>
+    <view class='introduce_list_ul'>
+      <view class='introduce_list_span'></view>
+      <view class='introduce_list_li'>
+        <view>申请专业会员资质必须</view>
+        <view class='introduce_list_p'>拥有保险从业人员相关执业资质</view>
+      </view>
+    </view>
+    <view class='introduce_list_ul'>
+      <view class='introduce_list_span'></view>
+      <view class='introduce_list_li'>无保险从业人员资质者无法申请专业会员。</view>
+    </view>
+    <view class='introduce_list_ul'>
+      <view class='introduce_list_span'></view>
+      <view class='introduce_list_li'>具有保险从业人员资质者在进行会员认证时，平台会通过 上传的认证信息进行自动识别。若您确认提交认证信息无 误且您具有保险从业人员资质可尝试重新申请或联系客服。</view>
+    </view>
+  </view>
+  <!--  -->
+  <!-- <view class='info_btn'>
+    <button class='btn_bg' bindtap='resetJump'>重新认证</button>
+  </view> -->
+  <!-- 客服 -->
+  <customer></customer>
+</view>

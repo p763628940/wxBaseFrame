@@ -1,0 +1,11 @@
+@import '../basicName/basicName';
+
+.info_top {
+  width:690rpx;
+  font-size: 26rpx;
+  color: rgba(102, 102, 102, 1);
+  padding: 22rpx 30rpx;
+}
+.info_form{
+  margin-top: 0;
+}

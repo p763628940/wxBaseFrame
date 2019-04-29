@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "password": "/components/password/password"
+  },
+  "navigationBarTitleText": "提现"
+}

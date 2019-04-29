@@ -1,0 +1,42 @@
+<view class="box">
+    <image src="{{md1}}"class="topimg"></image>
+    <image src="{{md2}}"class="topimg2"></image>
+</view>
+<view class="person">
+    <view class="person_t">
+        <image src="{{friendInfo.userAvatarUrl}}" class="face"></image>
+        <view class="person_tr">
+            <view class="person_tr1">
+                {{friendInfo.userName}}
+            </view>
+            <view class="person_tr2">
+                邀请您加入<text>小爱健康(推广版)</text>，一起轻松赚现金
+            </view>
+        </view>
+    </view>
+    <view class="button" hover-class="button_hover" bindtap="inviteUser">我要加入</view>
+</view>
+<view class="log_warp" wx:if="{{boxShow}}">
+    <image src="{{close_w}}" class="close_w" bindtap="close">
+    </image>
+    <view class="log_con">
+        <image src="{{joinfial}}" wx:if="{{!joinType}}" class="joinfial"></image>
+        <image src="{{joins}}" wx:if="{{joinType}}" class="joins"></image>
+        <view class="log_con_text2"  wx:if="{{joinType}}">
+            <text>恭喜您已成功加入</text>
+            <text>小爱健康祝您赚钱多多</text>
+        </view>
+
+        <view class="log_con_text"  wx:if="{{!joinType}}">
+            <text wx:if="{{!text}}">您已经接受过他人的邀请</text>
+            <text wx:if="{{!text}}">无法再次接受新的邀请</text>
+            <text wx:if="{{text}}">{{text}}</text>
+        </view>
+    </view>
+    <view class="know"  bindtap="movetoAd">
+        进入小爱健康(推广版）
+    </view>
+</view>
+<button class='container_pop' open-type='getUserInfo' wx:if="{{showWarp}}" bindgetuserinfo='getUserInfoShow'></button>
+<image src="{{joinfial}}" style="display: none"></image>
+<image src="{{joins}}" style="display: none"></image>

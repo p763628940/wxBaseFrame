@@ -1,0 +1,59 @@
+@import '../../basicName/basicName';
+
+page {
+  width: 100%;
+  background: #fff;
+}
+
+.top_banner1 {
+  width: 750rpx;
+  height: 286rpx;
+  background: url("https://xiaoaires.aibao.com/commissionReturn/personal/pb_cert_banner.png") no-repeat #5458ff;
+  background-size: cover;
+  position: relative;
+}
+
+.status_img {
+  width: 100%;
+  margin: 0 auto;
+  position: absolute;
+  top: 10rpx;
+  left: 0;
+  text-align: center;
+  z-index: 2;
+}
+
+.status_img image {
+  width: 344rpx;
+  height: 192rpx;
+  display: inline-block;
+}
+
+.status_img view {
+  font-size: 36rpx;
+  font-weight: 500;
+  color: #fff;
+  line-height: 50rpx;
+}
+
+.tip_msg {
+  width: 690rpx;
+  font-size: 26rpx;
+  color: #5458ff;
+  line-height: 37rpx;
+  background: #f5f9ff;
+  padding: 20rpx 30rpx;
+}
+
+/*  */
+
+.info_form_li {
+  width: 690rpx;
+  margin: 0 30rpx;
+  padding: 0;
+  border-bottom:1rpx solid #e5e5e5;
+  background: transparent;
+}
+.li_tit {
+  margin-right: 70rpx;
+}

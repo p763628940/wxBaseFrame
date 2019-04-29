@@ -1,0 +1,159 @@
+@import '../basicName/basicName';
+
+.info_top {
+  width: 690rpx;
+  font-size: 26rpx;
+  color: rgba(102, 102, 102, 1);
+  padding: 22rpx 30rpx;
+}
+
+.info_form {
+  margin-top: 0;
+}
+/*  */
+
+.info_form_li {
+  width: 720rpx;
+  margin: 0 0 0 30rpx;
+  padding: 0;
+  border-bottom: 1rpx solid e5e5e5;
+  background: transparent;
+}
+
+.info_form_ul:last-child .info_form_li {
+  border-bottom: none;
+}
+
+.li_tit {
+  width: 150rpx;
+  min-width: 150rpx;
+  margin-right: 70rpx;
+}
+
+.li_tan {
+  padding: 37rpx 30rpx;
+}
+
+.li_tan image {
+  width: 26rpx;
+  height: 26rpx;
+}
+
+.li_arrow {
+  padding: 37rpx 30rpx;
+}
+
+.li_arrow image {
+  width: 13rpx;
+  height: 26rpx;
+}
+
+.picker_gray {
+  color: #bbb;
+  font-size: 30rpx;
+}
+
+.picker {
+  flex: 2;
+  font-size: 30rpx;
+  color: rgba(51, 51, 51, 1);
+  height: 100rpx;
+  line-height: 100rpx;
+}
+
+picker {
+  flex: 2;
+  font-size: 30rpx;
+  color: rgba(51, 51, 51, 1);
+  height: 100rpx;
+  line-height: 100rpx;
+}
+
+/* 同意协议 */
+
+.agree {
+  width: 690rpx;
+  margin: 0 30rpx;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.agree>view {
+  padding: 30rpx 0;
+}
+
+.agree_checkbox {
+  display: inline-block;
+}
+
+.agree_checkbox image {
+  width: 26rpx;
+  height: 26rpx;
+}
+
+.agree_con {
+  display: flex;
+  align-items: center;
+  margin-left: 8rpx;
+}
+
+.agree_con_p {
+  font-size: 24rpx;
+  color: #999;
+  line-height: 38rpx;
+}
+
+.agree_con_span {
+  color: #4b8dfa;
+  font-size: 24rpx;
+  line-height: 38rpx;
+}
+
+/* 持卡人说明 */
+
+.con_tit {
+  font-size: 38rpx;
+  font-weight: bold;
+  color: rgba(51, 51, 51, 1);
+  text-align: center;
+  padding: 30rpx 0 22rpx;
+  border-bottom: 1rpx solid e5e5e5;
+}
+
+.dialog_con .con_span {
+  width: 20rpx;
+  height: 20rpx;
+  min-width: 20rpx;
+  min-height: 20rpx;
+  background: #fff;
+  border: 6rpx solid #5458ff;
+  display: block;
+  border-radius: 50%;
+  margin-right: 28rpx;
+  margin-top: 18rpx;
+}
+
+.con_btn {
+  margin-bottom: 30rpx;
+  /* margin-top: -20rpx; */
+}
+
+.con_btn button {
+  width: 490rpx;
+}
+.con_main{
+  display: flex;
+  align-items: flex-start;
+}
+.con_main:last-child {
+  margin-bottom: 0;
+}
+
+.dialog_bao scroll-view {
+  height: auto;
+}
+.dialog_bao {
+  top: 200rpx;
+  transform: translate(-50%, 0);
+}

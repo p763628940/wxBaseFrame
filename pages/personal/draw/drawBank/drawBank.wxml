@@ -1,0 +1,69 @@
+<view class="container">
+  <view class="bank_top" data-id='{{bankInfo.bankCardId}}' bindtap="changBankClick">
+    <view class="bank_top_left">
+      <view class="bank_logo">
+        <image src='{{bankInfo.bankLogo}}'></image>
+      </view>
+      <view class="bank_name">
+        <view>{{bankInfo.bankName}}</view>
+        <view>尾号{{cardNum}}</view>
+      </view>
+    </view>
+    <view class="bank_top_right">
+      <view>更换</view>
+      <image src='{{ar}}'></image>
+    </view>
+  </view>
+  <!--  -->
+  <view class="bank_con">
+    <view class='bank_tit'>提现余额</view>
+    <view class="bank_form">
+      <view class='bank_li'>
+        <view class="li_tit">¥</view>
+        <view class="li_input">
+          <input type="number" value='{{balanceVal}}' bindinput='moneyWatch'></input>
+        </view>
+      </view>
+    </view>
+    <view class="bank_money" wx:if='{{showStatue==false}}'>
+      <view class='bank_money_p' wx:if="{{accountInfo.freeWithdrawTime>0}}">可提现：{{accountInfo.inWithdrawCash}}元</view>
+      <view class='bank_money_p' wx:if="{{accountInfo.freeWithdrawTime<=0}}">
+        <view class='bank_money_p'>可提现：{{accountInfo.inWithdrawCash}}元，手续费</view>
+        <view class='bank_money_span'>{{poundage}}元</view>
+      </view>
+      <button bindtap="allCheck">全部提现</button>
+    </view>
+    <view class="bank_money" wx:if='{{showStatue==true}}'>
+      <view class='bank_money_p'>输入金额超过可提现额度</view>
+    </view>
+  </view>
+  <!--  -->
+  <view class="bank_btn">
+    <button class="btn_bg wh69 mt70" disabled="{{disabled}}" bindtap="putForward">立即提现</button>
+    <view class='btn_rule'>
+      <view class='rule_p'>预计3-8个工作日到账，查看</view>
+      <view class='rule_span' bindtap="drawRuleJump">《提现规则》</view>
+    </view>
+  </view>
+  <!-- 输入密码弹窗 -->
+  <view class='modal_pop' catchtouchmove='true' wx:if='{{showPasswdBox==true}}'>
+    <view class="modal_mask" catchtouchmove='true' bindtap='showPasswdClick'></view>
+    <view class="modal_dialog">
+      <view class='modal_top'>
+        <view></view>
+        <view class="modal_title">交易密码</view>
+        <image src='{{cha}}' bindtap='showPasswdClick'></image>
+      </view>
+      <view class="modal_content">
+        <view class="modal_input">
+          <input type="password" class="input" value='{{password}}' bindinput="inputChange"></input>
+        </view>
+        <view class='modal_forget' bindtap='forgetPassword'>忘记密码</view>
+      </view>
+
+      <view class="modal_footer">
+        <view class="btn_bg btn_confirm" bindtap="onConfirm" data-status="confirm">确认</view>
+      </view>
+    </view>
+  </view>
+</view>

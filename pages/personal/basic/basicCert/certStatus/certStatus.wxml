@@ -1,0 +1,80 @@
+<view class="container">
+  <!--填写认证消息 认证中 -->
+  <view wx:if="{{certStatus==10}}">
+    <view class="top_banner top_banner1">
+      <view class="status_img">
+        <image src='{{status1}}'></image>
+        <view>实名认证已提交</view>
+      </view>
+    </view>
+    <view class="tip_msg">实名认证已提交，当前认证为普通会员用户，证件影像资料 审核将在1个工作日左右完成，未审核通过前无法提现。</view>
+  </view>
+  <!-- 认证失败-->
+  <view wx:if="{{certStatus==-20}}">
+    <view class="top_banner top_banner1">
+      <view class="status_img">
+        <image src='{{status2}}'></image>
+        <view>认证失败</view>
+      </view>
+    </view>
+    <view class="tip_msg">您的身份信息和证件影像信息不一致，请填写正确信息， 重新申请，否则无法正常体现。</view>
+  </view>
+  <!-- 认证成功-->
+  <view wx:if="{{certStatus==20}}">
+    <view class="top_banner top_banner1">
+      <view class="status_img status_img4">
+        <image src='{{status4}}'></image>
+      </view>
+      <view class="status_head">
+        <image src='{{avatarUrl}}'></image>
+      </view>
+      <view class='status_label'>
+        <image src='{{label}}'></image>
+        <view wx:if="{{certRank=='expert'}}">专业会员</view>
+        <view wx:else>普通会员</view>
+      </view>
+    </view>
+  </view>
+  <!--认证填写信息-->
+  <view class="info_form">
+    <view class='info_form_ul'>
+      <view class='info_form_li'>
+        <view class='li_tit'>真实姓名</view>
+        <view class='li_input'>{{idName}}</view>
+      </view>
+    </view>
+    <view class='info_form_ul'>
+      <view class='info_form_li'>
+        <view class='li_tit'>身份证号</view>
+        <view class='li_input'>{{idNo}}</view>
+      </view>
+    </view>
+  </view>
+  <!--按钮wx:if="{{certStatus!=20}}"-->
+  <view class="info_btn mt70">
+    <button class="btn_bg wh69" bindtap="btnclick">{{btnText}}</button>
+  </view>
+  <!-- 如何成为专业资质会员 -->
+  <view class='status_bottom' wx:if="{{certStatus==20 && certRank=='normal'}}" bindtap='introduceJump'>
+    <view>如何成为专业资质会员</view>
+    <image src='{{arBlue}}'></image>
+  </view>
+    <!-- 提交成功 -->
+  <view class='dialog_pop' wx:if='{{cardSubmitBox==true}}' catchtouchmove='true'>
+    <view class='dialog_bg' bindtap='cardSubmitClick' catchtouchmove='true'></view>
+    <view class='dialog_con dialog_con2'>
+      <view class='dialog_bao dialog_bao2'>
+        <view class='con_card'>
+          <image class='con_top' wx:if="{{certRank=='normal'}}" src='{{statusImg1}}'></image>
+          <image class='con_top' wx:else src='{{statusImg2}}'></image>
+          <view class='con_article'>
+            <button class='btn_bg' bindtap='drawNowClick'>马上推广 赚取奖励</button>
+          </view>
+        </view>
+      </view>
+      <view class='dialog_close' bindtap='cardSubmitClick'>
+        <image src='{{close}}'></image>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,87 @@
+<!--details.wxml-->
+<view class="section">
+    <image class="zdq" src="{{zdq}}"bindtap="movetozdq"></image>
+    <image class="my"
+           src="{{my}}"
+           bindtap="moveToCenter"
+    ></image>
+    <image class="message" src="{{message_icon}}"  bindtap="moveToMessageList"></image>
+    <view class="dian" wx:if="{{unReadMsgStatus}}">
+    </view>
+    <view   class="swpers">
+        <swiper
+                indicator-dots="true"
+                autoplay="true"
+                interval="6000"
+                indicator-color="rgba(135,135,135,0.2)"
+                indicator-active-color="rgba(84,88,255,1)"
+                next-margin="26rpx"
+                circular="true"
+                class="swpers"
+                bindchange="setcuurrent"
+        >
+            <block wx:for="{{imgUrls}}" wx:for-index="idx" wx:key="idx">
+                <swiper-item>
+                    <image src="{{item}}" bindtap="movetoTarget" class="slide-image"/>
+                </swiper-item>
+            </block>
+        </swiper>
+        <view class="con_tit">
+            <view class="con_tit_item">
+                健康服务
+                <view class="con_tit_item_under">
+                </view>
+            </view>
+        </view>
+    </view>
+
+
+    <scroll-view
+            scroll-y
+            style="height:{{windowsHeight}}px;"
+            bindscrolltolower="getListData"
+    >
+        <view class="con">
+            <view class="conitem"
+                  wx:for="{{shopList}}"
+                  wx:for-index="idx"
+                  wx:key="idx"
+                  data-partnerItemId="{{item.partnerItemId}}"
+                  bindtap="moveToDetails" >
+
+            <image src="{{item.imageUrl}}" class="coniteml"></image>
+            <view class="conitemr">
+                <view class="conitemr_tit">
+                    {{item.productName}}
+                </view>
+                <view class="conitemr_under">
+                    {{item.productDesc}}
+                </view>
+                <view class="price">
+                    ¥{{item.productPrice}}
+                </view>
+                <view  hidden="{{!certStatus}}">
+                    <view class="price_under">
+                        推广费{{item.spreadRatio*100}}%
+                    </view>
+                </view>
+
+                <view hidden="{{certStatus}}">
+                    <view class="price_two_box">
+                        <view class="price_two" catchtap="movtorz" >
+                            <text>认证后即可查看推广费</text>
+                            <image src="{{arryeloow}}" class="price_two_img"></image>
+                        </view>
+                    </view>
+                </view>
+
+
+            </view>
+        </view>
+            <!--<view class="nomore" wx:if="fa">没有更多了-.-</view>-->
+        </view>
+    </scroll-view>
+</view>
+
+<button class='container_pop' open-type='getUserInfo' wx:if="{{showWarp}}" bindgetuserinfo='getUserInfoShow'></button>
+

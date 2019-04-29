@@ -1,0 +1,2 @@
+<import src ="../../../components/agreement/agreement.wxml"/>
+<template is="msgItem" data='{{title:title,listBody:listBody}}'/>

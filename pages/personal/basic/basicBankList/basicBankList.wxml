@@ -1,0 +1,46 @@
+<view class='container'>
+  <view class="bank_list">
+    <view class='bank_list_ul' wx:for="{{bankListData}}" wx:for-item="item" wx:for-index="index" wx:key="index">
+      <!-- <image src="{{bgSrc[bankBg[item.bankEname||'abc']||1]}}"></image> -->
+      <view class='li_one'>
+        <view class="bank_left">
+          <view class="bank_logo">
+            <image src='{{item.bankLogo}}'></image>
+          </view>
+          <view class="bank_name">
+            <view class='bank_name_h'>{{item.bankName}}</view>
+            <view class='bank_name_p'>储蓄卡</view>
+          </view>
+        </view>
+        <view class="bank_btn" data-id="{{item.bankCardId}}" bindtap="changeBank">更换</view>
+      </view>
+      <view class="li_two">
+        <view class='li_two_num'>****</view>
+        <view class='li_two_num'>****</view>
+        <view class='li_two_num'>****</view>
+        <view>{{item.cardNum}}</view>
+      </view>
+    </view>
+  </view>
+    <!-- 输入密码弹窗 -->
+  <view class='modal_pop' catchtouchmove='true' wx:if='{{showPasswdBox==true}}'>
+    <view class="modal_mask" catchtouchmove='true' bindtap='showPasswdClick'></view>
+    <view class="modal_dialog">
+      <view class='modal_top'>
+        <view></view>
+        <view class="modal_title">交易密码</view>
+        <image src='{{cha}}' bindtap='showPasswdClick'></image>
+      </view>
+      <view class="modal_content">
+        <view class="modal_input">
+          <input type="password" class="input" value='{{password}}' bindinput="inputChange"></input>
+        </view>
+        <view class='modal_forget' bindtap='forgetPassword'>忘记密码</view>
+      </view>
+
+      <view class="modal_footer">
+        <view class="btn_bg btn_confirm" bindtap="onConfirm" data-status="confirm">确认</view>
+      </view>
+    </view>
+  </view>
+</view>

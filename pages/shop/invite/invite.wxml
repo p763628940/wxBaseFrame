@@ -1,0 +1,54 @@
+<view class="invite">
+  <image src="{{yqbg}}" class="topbg"></image>
+    <view class="gz" bindtap="movetogz">
+        活动规则
+    </view>
+    <view class="text_con">
+        <view class="toptext">
+            <view class="toptext_t">
+                出单奖励{{insurance}}%
+            </view>
+            <view class="toptext_b">
+           <image src="{{yq_money}}" class="yq_money"></image>
+                <view class="toptext_be">好友注册并认证，永久获得该好友推广出单的{{insurance}}%作为邀请奖励。</view>
+            </view>
+        </view>
+        <image src="{{w_uner}}" class="w_uner"></image>
+    </view>
+    <view class="jl">
+        <view class="jlt">
+            <image src="{{titiIcon}}" class="titiIcon"></image>
+            <view class="jlt_text">我的奖励</view>
+            <image src="{{titiIcon}}" class="titiIcon"></image>
+        </view>
+        <view class="jlb">
+            <view class="jlb_item" bindtap="moveTofriend">
+                <view class="jlb_itemt">
+                    <image src="{{people_icon}}" class="people_icon"></image>
+                    <view class="jlb_itemt_text">邀请好友</view>
+                    <image src="{{arrow_hui}}" class="arrow"></image>
+                </view>
+                <view class="jlb_itemb">
+                    {{inviteData.userCount||'0'}}人
+                </view>
+            </view>
+            <view class="line"></view>
+            <view class="jlb_item" bindtap="moveToAward">
+                <view class="jlb_itemt">
+                    <image src="{{m_icon}}" class="m_icon"></image>
+                    <view class="jlb_itemt_text">累计奖励</view>
+                    <image src="{{arrow_hui}}" class="arrow"></image>
+                </view>
+                <view class="jlb_itemb">
+                    {{inviteData.moneyCount||'0'}}元
+                </view>
+            </view>
+
+        </view>
+    </view>
+    <view class="button_box">
+        <button open-type="share" class="share_box_btn" wx:if="{{certStatus==20||certStatus==10}}"></button>
+        <view class="yq_btn" bindtap="moveToRenzheng" hover-class="button_hover">立刻邀请</view>
+
+    </view>
+</view>

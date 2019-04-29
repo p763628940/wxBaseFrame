@@ -1,0 +1,50 @@
+<view class="container">
+  <view class="speed_bar">
+    <view class="speed_bar_list">
+      <view class='bar_list_li'>
+        <view class="icon icon_one"></view>
+        <view class="bar_name">已提交提现申请</view>
+      </view>
+      <view class='bar_list_li'>
+        <view class="icon icon_two"></view>
+        <view class="bar_name bar_color">处理中</view>
+        <view class="bar_txt">预计3-8个工作日到账</view>
+      </view>
+      <view class='bar_list_li'>
+        <view class="icon icon_three"></view>
+        <view class="bar_name">到账成功</view>
+      </view>
+    </view>
+  </view>
+  <!--  -->
+  <view class="speed_list">
+    <view class='speed_list_ul'>
+      <view class='speed_list_li'>
+        <view class='speed_li_left'>
+          <view class="speed_li_tit">提现金额：</view>
+          <view class="speed_li_price">{{withdrawData.cash}}元</view>
+        </view>
+      </view>
+      <view class='speed_list_li'>
+        <view class='speed_li_left'>
+          <view class="speed_li_tit">手续费：</view>
+          <view class="speed_li_price">{{withdrawData.fee}}元</view>
+        </view>
+      </view>
+      <view class='speed_list_li'>
+        <view class='speed_li_left'>
+          <view class="speed_li_tit">银行卡：</view>
+          <view class="speed_li_price">
+            <view class="mr20">{{withdrawData.kaiHuHang}}</view>
+            <view>{{withdrawData.cardNum}}</view>
+          </view>
+        </view>
+        <image src='{{withdrawData.bankLogo}}' class="speed_li_img"></image>
+      </view>
+    </view>
+  </view>
+  <!--  -->
+  <view class="info_btn">
+    <button class="btn_bg wh69 mt70" bindtap="linkToIndex">完成</button>
+  </view>
+</view>

@@ -1,0 +1,12 @@
+page{
+  border-top:none;
+}
+.banner, .banner_font {
+  width: 750rpx;
+  height: 527rpx;
+}
+
+.banner_font image {
+  width: 100%;
+  height: 527rpx;
+}

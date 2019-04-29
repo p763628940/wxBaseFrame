@@ -1,0 +1,90 @@
+<view class="box">
+    <view class="title">
+        <image src="{{customerIfo.avatarUrl}}" class="face"></image>
+        <view class="titler">{{customerIfo.nickName}}</view>
+    </view>
+    <view class="input_item">
+        <view class="input_iteml">姓名</view>
+        <view class="input_itemr">
+            <input   placeholder="请输入姓名"
+                     bindinput="setInputData"
+                     data-type="idName"
+                     value="{{customerIfo.idName}}"
+                     placeholder-class="placeholderClass" />
+        </view>
+    </view>
+    <view class="input_item">
+        <view class="input_iteml">身份证号</view>
+        <view class="input_itemr">
+            <input   placeholder="请输入身份证号"
+                     bindinput="setInputData"
+                     data-type="idNo"
+                     value="{{customerIfo.idNo}}"
+                     placeholder-class="placeholderClass"/>
+
+        </view>
+    </view>
+</view>
+    <view class="bg"></view>
+<view class="box2">
+    <view class="input_item">
+        <view class="input_iteml">有无社保</view>
+        <view class="input_itemr">
+            <view class="tab_box">
+                <view class=" {{customerIfo.socialCode==1?'tab_ac':'tab'}}"
+                      bindtap="setClickData"
+                      data-type="socialCode"
+                      data-val="1">有社保</view>
+                <view class="{{customerIfo.socialCode==0?'tab_ac':'tab'}}"
+                      style="margin-left: 10rpx"
+                      bindtap="setClickData"
+                      data-type="socialCode"
+                      data-val="0"
+                >无社保</view>
+            </view>
+        </view>
+    </view>
+    <view class="input_item">
+        <view class="input_iteml">手机号码</view>
+        <view class="input_itemr">
+            <input  placeholder="请输入手机号码"
+                    bindinput="setInputData"
+                    data-type="mobile"
+                    value="{{customerIfo.mobile}}"
+                    placeholder-class="placeholderClass"/>
+        </view>
+    </view>
+    <view class="input_item">
+        <view class="input_iteml">常居住地</view>
+        <picker
+                mode="region"
+                bindchange="bindRegionChange"
+                value="{{region}}"
+                custom-item="{{customItem}}"
+                class="picker"
+        >
+            <view class="input_itemr" wx:if="{{region[0]}}">
+                {{region[0]}}{{region[1]}}{{region[2]}}
+            </view>
+            <view class="input_itemr input_itemruse"  wx:if="{{!region[0]}}">
+
+                <view class="input_itemr_text">请选择</view>
+                <image src="{{}}" class="arrow"></image>
+            </view>
+        </picker>
+    </view>
+    <view class="input_item">
+        <view class="input_iteml">详细地址</view>
+        <view class="input_itemr">
+            <input  placeholder="请输入详细地址"
+                    bindinput="setInputData"
+                    data-type="address"
+                    value="{{customerIfo.address}}"
+                    placeholder-class="placeholderClass"/>
+        </view>
+    </view>
+</view>
+<view class="button_box" bindtap="updateCustomerInfo">
+    <view class="button">保存</view>
+</view>
+

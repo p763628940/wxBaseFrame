@@ -1,0 +1,178 @@
+.container {
+  width: 100%;
+  border-top: 1rpx solid #e5e5e5;
+}
+
+.top_nav {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.nav_msg {
+  width: 644rpx;
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin: 38rpx 53rpx 0;
+}
+
+.nav_tit {
+  width: 100%;
+  font-size: 34rpx;
+  font-weight: bold;
+  color: #333;
+  line-height: 48rpx;
+  text-align: center;
+  padding: 12rpx 0;
+}
+
+.nav_demo {
+  font-size: 34rpx;
+  font-weight: bold;
+  color: #4b8dfa;
+  line-height: 48rpx;
+  position: absolute;
+  right: 0;
+  padding: 12rpx 0;
+}
+
+.nav_p {
+  font-size: 28rpx;
+  color: #666;
+  line-height: 40rpx;
+  text-align: center;
+}
+
+/* 身份证 */
+
+.card_con {
+  width: 100%;
+}
+
+.card_img {
+  background: #5458ff;
+  width: 520rpx;
+  height: 321rpx;
+  box-shadow: 0rpx 6rpx 10rpx 0rpx rgba(27, 27, 78, 0.06);
+  border-radius: 10rpx;
+  text-align: center;
+  margin: 30rpx auto;
+  overflow: hidden;
+}
+
+.card_img>view {
+  margin-top: 20rpx;
+}
+
+.default_img image {
+  width: 385rpx;
+  height: 220rpx;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.card_img>view view {
+  font-size: 32rpx;
+  color: #fff;
+  line-height: 45rpx;
+  margin-top: 16rpx;
+}
+
+.paths {
+  width: 520rpx;
+  height: 321rpx;
+  display: inline-block;
+}
+
+/* 同意协议 */
+
+.agree {
+  width: 100%;
+  margin: 30rpx auto 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.agree>view {
+  padding: 40rpx 0;
+}
+
+.agree_checkbox {
+  display: inline-block;
+}
+
+.agree_checkbox image {
+  width: 26rpx;
+  height: 26rpx;
+}
+
+.agree_con {
+  display: flex;
+  align-items: center;
+  margin-left: 8rpx;
+}
+
+.agree_con_p {
+  font-size: 24rpx;
+  color: #999;
+  line-height: 38rpx;
+}
+
+.agree_con_span {
+  color: #4b8dfa;
+  font-size: 24rpx;
+  line-height: 38rpx;
+}
+
+/* 示例 */
+
+.dialog_bao {
+  min-height: 677rpx;
+}
+
+.con_tit {
+  font-size: 38rpx;
+  font-weight: bold;
+  color: rgba(51, 51, 51, 1);
+  text-align: center;
+  padding: 30rpx 0 22rpx;
+  border-bottom: 1rpx solid #e5e5e5;
+}
+
+.con_p {
+  font-size: 24rpx;
+  color: rgba(102, 102, 102, 1);
+  line-height: 42rpx;
+  padding: 20rpx 24rpx 7rpx;
+}
+
+.con_article {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40rpx;
+}
+
+.article_left {
+  font-size: 34rpx;
+  color: rgba(51, 51, 51, 1);
+  line-height: 48rpx;
+  margin-right: 90rpx;
+}
+
+.article_right {
+  width: 280rpx;
+  height: 177rpx;
+  display: inline-block;
+}
+
+.dialog_bao {
+  top: 180rpx;
+  transform: translate(-50%, 0);
+  border-radius: 10rpx;
+}
+
+.dialog_close {
+  bottom: 166rpx;
+}

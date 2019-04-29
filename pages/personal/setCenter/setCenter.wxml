@@ -1,0 +1,134 @@
+<view class='container'>
+  <!-- 热词滚动 -->
+  <view class="prompt" wx:if='{{registerShow==false && certStatus==0}}'>
+    <view class="prompt_marquee">
+      <view class='marquee_li'>
+        <view class='marquee_li_p'>根据监管相关规定，您先需完成实名认证</view>
+        <!-- <view class='marquee_li_p'>根据监管相关规定，您先需完成实名认证</view> -->
+      </view>
+    </view>
+    <view class='prompt_btn' bindtap="sertOnclick">去认证</view>
+  </view>
+  <!-- 个人信息状态 -->
+  <view class='top_con'>
+    <view class='con_banner' bindtap='inforClick'>
+      <!--未登陆展示-->
+      <view class="info_left" wx:if='{{registerShow}}'>
+        <view class='info_head'>
+          <image src='{{head}}'></image>
+        </view>
+        <view class="info_msg">
+          <view class='msg_name'>
+            <view class='name_span'>登录/注册</view>
+          </view>
+        </view>
+      </view>
+      <!--已登陆展示-->
+      <view class="info_left" wx:if='{{!registerShow}}'>
+        <view class='info_head'>
+          <image src='{{avatarUrl}}'></image>
+        </view>
+        <view class="info_msg">
+          <view class='msg_name' wx:if="{{nickName!=''}}">
+            <view class='name_span'>{{nickName}}</view>
+            <view class="msg_sign {{certStatus == 20?'sign_on':''}}">
+              <image src='{{signStatus}}'></image>
+              <view>{{certStatusName}}</view>
+            </view>
+          </view>
+          <view class='msg_name' wx:else>
+            <view class='name_span'>{{mobile}}</view>
+            <view class="msg_sign {{certStatus == 20?'sign_on':''}}">
+              <image src='{{signStatus}}'></image>
+              <view>{{certStatusName}}</view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <!-- 箭头 -->
+      <image src='{{arrowW}}' class="infor_right"></image>
+    </view>
+    <!--  -->
+    <view class='con_menu'>
+      <view class='menu_ul'>
+        <view class='menu_li' bindtap="linkToDrawForward">
+          <view class="menu_li_box">
+            <view class="menu_li_yuan">{{accountInfo.inWithdrawCash}}</view>
+            <view class="menu_li_name">可提现(元)</view>
+          </view>
+        </view>
+        <view class='menu_li' data-id='2' bindtap="linkToDrawReward">
+          <view class="menu_li_box">
+            <view class="menu_li_yuan">{{accountInfo.settleCash}}</view>
+            <view class="menu_li_name">结算中(元)</view>
+          </view>
+        </view>
+        <view class='menu_li' data-id='3' bindtap="linkToDrawReward">
+          <view class="menu_li_box">
+            <view class="menu_li_yuan">{{accountInfo.totalCash}}</view>
+            <view class="menu_li_name">累计收入(元)</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 个人列表 -->
+  <view class='con_list mt80'>
+    <view class='list_ul'>
+      <view class='list_ul_li' bindtap="customerJump">
+        <view class="li_left">
+          <image src='{{icon1}}'></image>
+          <view class='li_left_p'>客户管理</view>
+        </view>
+        <view class='li_right'>
+          <view wx:if='{{!registerShow}}'>{{totalRow}}个</view>
+          <image src='{{arrowH}}'></image>
+        </view>
+      </view>
+      <view class="line ml80"></view>
+      <view class='list_ul_li' bindtap="invitationJump">
+        <view class="li_left">
+          <image src='{{icon2}}'></image>
+          <view class='li_left_p'>邀请有礼</view>
+        </view>
+        <view class='li_right'>
+          <view class='color_orange'>邀请好友赚现金奖励</view>
+          <image src='{{arrowH}}'></image>
+        </view>
+      </view>
+      <view class="line ml80"></view>
+      <view class='list_ul_li' bindtap="contactJump">
+        <view class="li_left">
+          <image src='{{icon3}}'></image>
+          <view class='li_left_p'>联系客服</view>
+        </view>
+        <view class='li_right'>
+          <view>工作日10:00-17:00</view>
+          <image src='{{arrowH}}'></image>
+        </view>
+      </view>
+      <view class="line ml80"></view>
+      <view class='list_ul_li' bindtap="feedbackJump">
+        <view class="li_left">
+          <image src='{{icon4}}'></image>
+          <view class='li_left_p'>意见反馈</view>
+        </view>
+        <view class='li_right'>
+          <image src='{{arrowH}}'></image>
+        </view>
+      </view>
+      <view class="line ml80"></view>
+      <view class='list_ul_li' bindtap="aboutJump">
+        <view class="li_left">
+          <image src='{{icon5}}'></image>
+          <view class='li_left_p'>关于我们</view>
+        </view>
+        <view class='li_right'>
+          <image src='{{arrowH}}'></image>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<!-- 登录 -->
+<!-- <button class='container_pop' bindtap='handleRegister' wx:if='{{registerShow==true}}'></button> -->

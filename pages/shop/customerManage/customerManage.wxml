@@ -1,0 +1,42 @@
+<view class="bg"></view>
+<view class="mange_list">
+    <scroll-view
+            scroll-y
+            style="height:{{windowsHeight}}px;"
+            bindscrolltolower="getCustomerList"
+            bindscroll="scroll"
+            scroll-into-view="{{toView}}"
+            scroll-top="{{scrollTop}}"
+            wx:if="{{shopList.length>0}}"
+    >
+        <view class="itme"
+              wx:for="{{shopList}}"
+              wx:for-index="idx"
+              wx:key="idx"
+              bindtap="movetoInfo"
+              data-customerid="{{item.customerId}}"
+        >
+            <view class="itme_boxl">
+                <image src="{{item.avatarUrl}}" class="face"></image>
+                <view class="itme_m">
+                    <view class="itme_m_t">{{item.userName}}</view>
+                    <view class="itme_m_b">{{item.mobile}}</view>
+                </view>
+            </view>
+            <view class="itme_boxr">
+                <view class="itme_r">
+                    <view class="itme_r_t">购买{{item.totalCost}}元</view>
+                    <view class="itme_r_b">收入{{item.totalRevenue}}元</view>
+                </view>
+                <image src="{{arrow_hui}}" class="arrow"></image>
+            </view>
+        </view>
+    </scroll-view>
+    <view class="nodatafriend" wx:if="{{shopList.length<=0}}">
+        <image src="{{nofriend}}" class="nodatafriend_img"></image>
+        <view class="nodatafriend_text">暂无推广成功的客户，快去推广吧</view>
+
+    </view>
+
+
+</view>

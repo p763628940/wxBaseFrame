@@ -1,0 +1,86 @@
+<view class="container">
+  <view class='info_top'>请绑定持卡人本人的银行卡</view>
+  <!--填写信息-->
+  <view class="info_form">
+    <view class='info_form_ul'>
+      <view class='info_form_li'>
+        <view class='li_tit'>持卡人</view>
+        <view class='li_input'>{{idName}}</view>
+        <view class='li_tan' bindtap='showScrollClick'>
+          <image src='{{tan}}'></image>
+        </view>
+      </view>
+    </view>
+    <view class='info_form_ul'>
+      <view class='info_form_li'>
+        <view class='li_tit'>身份证号</view>
+        <view class='li_input'>{{idNo}}</view>
+      </view>
+    </view>
+    <view class='info_form_ul'>
+      <view class='info_form_li'>
+        <view class='li_tit'>付款银行</view>
+        <view class='li_input'>
+          <picker bindchange="bindPickerChange" value="{{bankType}}" range="{{bankList}}">
+            <view class='picker_gray' wx:if="{{bankType==''}}">选择银行</view>
+            <view class="picker" wx:else>
+              {{bankList[bankType]}}
+            </view>
+          </picker>
+        </view>
+        <view class='li_arrow'>
+          <image src='{{ar}}'></image>
+        </view>
+      </view>
+    </view>
+    <view class='info_form_ul'>
+      <view class='info_form_li'>
+        <view class='li_tit'>银行账号</view>
+        <view class='li_input'>
+          <input type='text' placeholder="请输入银行账号" placeholder-class='placeholder' maxlength='19' value='{{bankNum}}' bindinput='bankWatch'></input>
+        </view>
+      </view>
+    </view>
+    <view class='info_form_ul'>
+      <view class='info_form_li'>
+        <view class='li_tit'>详细开户行</view>
+        <view class='li_input'>
+          <input type='text' placeholder="如北京分行大望路支行" placeholder-class='placeholder' value='{{kaiHuHang}}' bindinput='bankDetailWatch'></input>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 同意协议 -->
+  <view class="agree">
+    <view class="agree_checkbox" bindtap="changeState">
+      <image wx:if='{{agreeStatus==true}}' src='{{agree}}'></image>
+      <image wx:else src='{{agreeH}}'></image>
+    </view>
+    <view class='agree_con'>
+      <view class='agree_con_p' bindtap="changeState">我已阅读并同意</view>
+      <view class='agree_con_span' bindtap="platformJump">《用户协议》</view>
+    </view>
+  </view>
+  <!--按钮-->
+  <view class="info_btn mt70">
+    <button class="btn_bg wh69" disabled="{{disabled}}" bindtap="btnclick">确认添加</button>
+  </view>
+  <!-- 持卡人说明 -->
+  <view class='dialog_pop' hidden='{{showScrollBox}}' catchtouchmove='true'>
+    <view class='dialog_bg' catchtouchmove='true' bindtap='showScrollClick'></view>
+    <view class='dialog_con'>
+      <view class='dialog_bao'>
+        <view class='con_tit'>持卡人说明</view>
+        <scroll-view scroll-y>
+          <view class='con_main' wx:for='{{activeRules}}' wx:for-item="item" wx:for-index="index" wx:key="index">
+            <view class='con_span'></view>
+            <view class='con_article'>
+              <text>{{item.text}}</text>
+            </view>
+          </view>
+        </scroll-view>
+        <view class='con_btn' bindtap='showScrollClick'><button class='btn_bg'>我知道了</button></view>
+      </view>
+    </view>
+  </view>
+</view>

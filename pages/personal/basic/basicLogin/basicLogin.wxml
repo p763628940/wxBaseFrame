@@ -1,0 +1,40 @@
+<view class="container">
+  <view class="top_banner">
+    <view class="top_head">
+      <image src='{{head}}'></image>
+      <view class='top_head_p'>小爱健康(推广版)</view>
+    </view>
+  </view>
+  <!--  -->
+  <form bindsubmit="formSubmit">
+    <view class='form_ul'>
+      <view class='form_ul_li'>
+        <view class='li_tit'>手机号</view>
+        <view class='li_input'>
+          <input name='mobile' type='number' placeholder='请输入手机号码' placeholder-class='placeholder' maxlength='11' value='{{mobile}}' bindinput='mobileWatch'></input>
+        </view>
+      </view>
+      <view class='form_ul_li'>
+        <view class='li_tit'>验证码</view>
+        <view class='li_input'>
+          <input name='code' type='number' placeholder='请输入验证码' maxlength='4' placeholder-class='placeholder'></input>
+        </view>
+        <div class="li_verify">
+          <button disabled="{{disabledSend}}" bindtap="sendCode">{{userCodeTxt}}</button>
+        </div>
+      </view>
+    </view>
+    <button class='login_btn mt70' disabled='{{disabledLogin}}' formType="submit">登录/注册</button>
+    <view class="agree">
+      <view class="agree_checkbox" bindtap="changeState">
+        <image wx:if='{{agreeStatus==true}}' src='{{agree}}'></image>
+        <image wx:else src='{{agreeH}}'></image>
+      </view>
+      <view class='agree_con'>
+        <view class='agree_con_p' bindtap="changeState">我已阅读并同意</view>
+        <view class='agree_con_span' bindtap="playformJump">《用户协议》</view>
+        <view class='agree_con_span' bindtap="privacyJump">《隐私政策》</view>
+      </view>
+    </view>
+  </form>
+</view>

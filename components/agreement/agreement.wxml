@@ -1,0 +1,6 @@
+<template name="msgItem">
+  <view class="container">
+    <view class='h1'>{{title}}</view>
+    <text>{{listBody}}</text>
+  </view>
+</template>

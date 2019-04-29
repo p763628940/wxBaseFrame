@@ -1,0 +1,13 @@
+<view class="container">
+  <view class="info_form">
+    <view class='info_form_ul'>
+      <view class='info_form_li'>
+        <view class='li_tit'>手机号</view>
+        <view class='li_input'>{{mobile}}</view>
+      </view>
+    </view>
+    <view class="info_btn">
+      <button class="btn_bg wh69 mt70" bindtap="handleMobile">更换手机号</button>
+    </view>
+  </view>
+</view>

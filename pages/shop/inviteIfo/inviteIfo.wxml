@@ -1,0 +1,89 @@
+<view class="inviteInfo">
+    <view class="inviteInfo_top">
+        <view class="inviteInfo_top">
+            <view class="friendList_item">
+                <view class="friendList_item_t">
+                    <view class="friendList_item_t1">
+                        <view class="friendList_item_t1l">{{friendInfo.idName}}</view>
+                        <view class="friendList_item_t1r">{{friendInfo.createTime}}加入</view>
+                    </view>
+                    <view class="friendList_item_t2">
+                        <view class="tabf"wx:if="{{friendInfo.mobile}}">已激活</view>
+                        <view class="tabf_an" wx:if="{{!friendInfo.mobile}}">未激活</view>
+                        <view class="tabf" wx:if="{{friendInfo.certStatus==20||friendInfo.certStatus==10}}">{{friendInfo.certStatusName}}</view>
+                        <view class="tabf_an"  wx:if="{{friendInfo.certStatus!=20&&friendInfo.certStatus!=10}}">{{friendInfo.certStatusName}}</view>
+                    </view>
+                </view>
+                <view class="friendList_item_b">
+                    <view class="friendList_item_b_item">
+                        <view class="friendList_item_b_iteml">推广单数：</view>
+                        <view class="friendList_item_b_itemr">{{friendInfo.tuiGuang}}单</view>
+                    </view>
+                    <view class="friendList_item_b_item">
+                        <view class="friendList_item_b_iteml">累积贡献：</view>
+                        <view class="friendList_item_b_itemr">{{friendInfo.contribution}}元</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="bg"></view>
+        <view class="tabbox">
+            <picker
+                    mode="date"
+                    value="{{date}}"
+                    start="2019-01-01"
+                    end="{{endDate}}"
+                    fields="month"
+                    bindchange="bindDateChange"
+            >
+                <view class="time_select_box">
+                    <view class="time_select" wx:if="{{date}}">
+                        {{date}}
+                    </view>
+                    <view class="time_select" wx:if="{{!date}}">
+                        全部
+                    </view>
+                    <image src="{{calender}}" class="calender"></image>
+                </view>
+            </picker>
+
+
+        </view>
+    </view>
+    <view class="infoList">
+        <scroll-view
+                scroll-y
+                style="height:{{windowsHeight}}px;"
+                bindscrolltolower="getInviteFriedList"
+                bindscroll="scroll"
+                scroll-into-view="{{toView}}"
+                scroll-top="{{scrollTop}}"
+                wx:if="{{friendList.length>0}}"
+        >
+            <view class="infoList_item"
+                  wx:for="{{awardList}}"
+                  wx:for-index="idx"
+                  wx:key="idx">
+                <view class="infoList_itemt">
+                    <view class="flag"></view>
+                    <view class="infoList_itemtr">
+                        <view class="infoList_itemtrl">{{item.productName}}</view>
+                        <view class="infoList_itemtrr">+{{item.cash}}元</view>
+                    </view>
+                </view>
+                <view class="infoList_itemb">
+                    <view class="infoList_itemb_item">
+                        <view class="infoList_itemb_item_l">金额</view>
+                        <view class="infoList_itemb_item_r">{{item.premium}}</view>
+                    </view>
+                    <view class="infoList_itemb_item">
+                        <view class="infoList_itemb_item_l">时间</view>
+                        <view class="infoList_itemb_item_r">{{item.feeStartDate}}</view>
+                    </view>
+                </view>
+            </view>
+
+        </scroll-view>
+
+    </view>
+</view>

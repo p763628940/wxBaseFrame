@@ -1,0 +1,31 @@
+<view class='customer'>
+  <!--客服按钮-->
+  <view class="kefu_img" hidden='{{customerLogoShow}}' bindtap="handleCustomer">
+    <image wx:if="{{customer!=''}}" src="{{customer}}" alt="客服logo"></image>
+    <image wx:else src="{{customer}}" alt="客服logo"></image>
+    <view class='p'>在线客服</view>
+  </view>
+  <!--免费咨询-->
+  <view class="dialog_pop kefu_popup" catchtouchmove='true' hidden='{{customerShow}}'>
+    <view class="pop_bg" catchtouchmove='true' bindtap="handleCustomer"></view>
+    <view class="pop_con">
+      <view class='pop_con_close' bindtap="handleCustomer">
+        <image src='{{pop}}'></image>
+      </view>
+      <view class="dialog_h">
+        <view class='h1'>{{customerData.title}}</view>
+        <view class='p'>{{customerData.description}}</view>
+        <view class="dis_btn">
+          微信号：{{customerData.wxNo}}
+          <view bindtap="copy">复制</view>
+        </view>
+      </view>
+      <view class="dialog_code">
+        <image src="{{customerData.imageUrl}}" bindtap="previewImage" data-src="{{customerData.imageUrl}}" alt=""></image>
+        <view class='p' wx:if="{{customerData.remark!=''}}">{{customerData.remark}}</view>
+        <view class='p' wx:else>长按识别二维码</view>
+      </view>
+    </view>
+  </view>
+</view>
+<slot></slot>

@@ -1,0 +1,111 @@
+@import '../certFrom/certFrom';
+
+.status_bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 0;
+  padding: 60rpx 0;
+}
+
+.status_bottom view {
+  font-size: 28rpx;
+  color: rgba(63, 134, 255, 1);
+  line-height: 40rpx;
+  margin-right: 8rpx;
+}
+
+.status_bottom image {
+  width: 12rpx;
+  height: 23rpx;
+  display: inline-block;
+}
+
+.status_img4 image {
+  width: 344rpx;
+  height: 235rpx;
+}
+
+.status_head {
+  width: 110rpx;
+  height: 110rpx;
+  min-width: 110rpx;
+  min-height: 110rpx;
+  position: absolute;
+  top: 73rpx;
+  left: 50%;
+  margin-left: -55rpx;
+  border-radius: 50%;
+  overflow: hidden;
+  z-index: 1;
+  background-image: url("https://xiaoaires.aibao.com/commissionReturn/icon/head.png") no-repeat;
+  background-size: cover;
+}
+
+.status_head  image {
+  width: 110rpx;
+  height: 110rpx;
+  min-width: 110rpx;
+  min-height: 110rpx;
+  display: inline-block;
+}
+
+/* 普通会员标签 */
+
+.status_label {
+  width: 159rpx;
+  height: 38rpx;
+  background: linear-gradient(59deg, rgba(238, 160, 56, 1) 0%, rgba(255, 217, 141, 1) 100%);
+  border-radius: 29rpx;
+  position: absolute;
+  top: 24rpx;
+  left: 24rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.status_label image {
+  width: 28rpx;
+  height: 28rpx;
+}
+
+.status_label view {
+  font-size: 24rpx;
+  color: rgba(148, 78, 21, 1);
+  line-height: 38rpx;
+  margin-left: 7rpx;
+}
+
+/* 提交成功弹窗 */
+
+.con_top {
+  width: 600rpx;
+  height: 407rpx;
+  background: rgba(58, 62, 212, 1);
+}
+
+.dialog_bao2 {
+  min-height: auto;
+}
+
+.dialog_con2 .con_article {
+  width: 600rpx;
+  margin-top: 0;
+  display: block;
+}
+
+.btn_bg {
+  width: 420rpx;
+  margin: 50rpx auto;
+}
+
+.dialog_bao {
+  top: 180rpx;
+  transform: translate(-50%, 0);
+}
+
+.dialog_close {
+  bottom: 270rpx;
+}

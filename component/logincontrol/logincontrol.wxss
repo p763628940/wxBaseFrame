@@ -1,0 +1,103 @@
+.from_login{
+  width: 650rpx;
+  margin: 25rpx 50rpx 0 50rpx;
+  overflow: hidden;
+}
+
+.form_li {
+  padding: 40rpx 0 20rpx 0;
+  border-bottom: 1rpx solid #e5e5e5;
+  display: flex;
+  align-items: center;
+  align-content: center;
+}
+
+.form_li_choice {
+  min-width: 88rpx;
+  height: 57rpx;
+  background: rgba(243, 243, 243, 1);
+  border-radius: 8rpx;
+  margin-right: 40rpx;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  padding: 6rpx 30rpx;
+}
+
+.form_li_choice view {
+  font-size: 32rpx;
+  color: rgba(102, 102, 102, 1);
+  margin-right: 10rpx;
+}
+
+.form_li_choice image {
+  width: 17rpx;
+  height: 11rpx;
+}
+
+/*  */
+
+.form_li button {
+  background: none;
+  border: none;
+  border-radius: 0;
+  font-size: 32rpx;
+  color: rgba(63, 134, 255, 1);
+}
+
+.form_li_input input {
+  font-size: 36rpx;
+  color: rgba(51, 51, 51, 1);
+}
+
+.login_btn {
+  width: 570rpx;
+  height: 94rpx;
+  line-height: 94rpx;
+  background: rgba(63, 134, 255, 1);
+  border-radius: 47rpx;
+  margin-top: 80rpx;
+  font-size: 32rpx;
+  color: rgba(255, 255, 255, 1);
+}
+
+.button-hover {
+  background: rgba(182, 209, 255, 1);
+}
+
+/*  */
+
+.form_agree {
+  margin-top: 40rpx;
+  margin-bottom: 80rpx;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+
+.agree_radio image {
+  width: 32rpx;
+  height: 32rpx;
+}
+
+.agree_font {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  font-size: 26rpx;
+  color: rgba(153, 153, 153, 1);
+  margin-left: 18rpx;
+}
+
+.agree_font .agree_font_span {
+  color: #79abff;
+  text-decoration: underline;
+}
+.placeholder {
+  color: #cccccc;
+}

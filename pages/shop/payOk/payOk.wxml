@@ -1,0 +1,31 @@
+<view class="okview">
+    <image src="{{payok}}" class="payok_img"></image>
+    <view class="payok_tit">
+        购买成功
+    </view>
+    <view class="payok_tit_under">
+        您已成功购买3张小爱视频医生日卡
+    </view>
+    <view class="bill_message">
+        <view class="bill_message_item">
+            订单编号：172839138
+        </view>
+        <view class="bill_message_item">
+            支付时间：2019-01-02
+        </view>
+        <view class="bill_message_item">
+            购买数量：3
+        </view>
+        <view class="bill_message_item">
+            支付金额：¥169.00
+        </view>
+    </view>
+    <view class="btnbox">
+        <view class="btn_item btn1">
+            继续购买
+        </view>
+        <view class="btn_item btn2">
+            前往使用
+        </view>
+    </view>
+</view>

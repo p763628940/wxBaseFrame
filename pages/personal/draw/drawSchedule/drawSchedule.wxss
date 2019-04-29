@@ -1,0 +1,183 @@
+page {
+  background: #f7f7f7;
+}
+
+.speed_bar {
+  width: 100%;
+  background: #fff;
+  padding-bottom: 24rpx;
+  border-top: 1rpx solid #f2f2f2;
+  margin-bottom: 20rpx;
+  position: relative;
+}
+
+.speed_bar_list {
+  padding: 50rpx 40rpx;
+}
+ 
+/*.speed_bar_list::after {
+  content: '';
+  position: absolute;
+  display: block;
+  border-left: 4rpx solid #e5e5e5;
+  height: 360rpx;
+  top: 50rpx;
+  left: 60rpx;
+  z-index: 1;
+} */
+
+.bar_list_li {
+  height: 165rpx;
+  position: relative;
+  padding-left: 80rpx;
+}
+
+.bar_list_li::before {
+  content: '';
+  position: absolute;
+  display: block;
+  border-left: 4rpx solid #E5E5E5;
+  height: 100%;
+  top: 20rpx;
+  left: 20rpx;
+  z-index: 1;
+}
+
+.bar_list_li::after {
+  content: '';
+  position: absolute;
+  display: block;
+  border-left: 4rpx solid #f8ac2d;
+  height: 100%;
+  top: 20rpx;
+  left: 20rpx;
+  z-index: 1;
+}
+
+.bar_list_li:last-child {
+  padding-bottom: 0;
+  height: auto;
+}
+
+.bar_list_li:last-child::after, .bar_list_li:last-child::before {
+  display: none;
+}
+
+.icon {
+  position: absolute;
+  width: 40rpx;
+  height: 40rpx;
+  min-width: 40rpx;
+  min-height: 40rpx;
+  background: #f2fcff;
+  left: 0;
+  display: block;
+  z-index: 2;
+}
+
+.icon::before {
+  content: ' ';
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: cover;
+}
+
+.icon_one::before {
+  width: 40rpx;
+  height: 40rpx;
+  background-image: url("https://xiaoaires.aibao.com/commissionReturn/personal/pb_bar1.png");
+}
+
+.icon_two {
+  margin-left: -4rpx;
+}
+
+.icon_two::before {
+  width: 48rpx;
+  height: 48rpx;
+  background-image: url("https://xiaoaires.aibao.com/commissionReturn/personal/pb_bar3.png");
+}
+
+.icon_three::before {
+  width: 40rpx;
+  height: 40rpx;
+  background-image: url("https://xiaoaires.aibao.com/commissionReturn/personal/pb_bar2.png");
+}
+
+.bar_name {
+  font-size: 32rpx;
+  color: rgba(102, 102, 102, 1);
+}
+
+.bar_color {
+  color: #666;
+  font-weight: bold;
+}
+
+.bar_txt {
+  font-size: 28rpx;
+  color: rgba(51, 51, 51, 1);
+  margin-top: 18rpx;
+}
+
+/* 列表 */
+
+.speed_list {
+  margin-top: 20rpx;
+  background: #fff;
+}
+
+.speed_list_ul {
+  width: 670rpx;
+  margin: 0 40rpx;
+}
+
+.speed_list_li {
+  height: 100rpx;
+  line-height: 100rpx;
+  border-bottom: 1rpx solid #e5e5e5;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.speed_li_left {
+  display: flex;
+  align-items: center;
+}
+
+.speed_li_tit {
+  min-width: 160rpx;
+  font-size: 32rpx;
+  color: #666;
+}
+
+.speed_li_price {
+  font-size: 32rpx;
+  color: #333;
+  margin-left: 10rpx;
+  display: flex;
+  align-items: center;
+}
+.speed_li_price view{
+  font-size: 32rpx;
+  color: #333;
+}
+.mr20{
+  margin-right: 20rpx;
+}
+.speed_li_img {
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1rpx solid red;
+  display: inline-block;
+}
+
+.speed_list_li:last-child {
+  border-bottom: 0;
+}
+
+/* 按钮 */

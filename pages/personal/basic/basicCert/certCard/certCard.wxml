@@ -1,0 +1,64 @@
+<view class="container">
+  <view class="top_nav">
+    <view class="nav_msg">
+      <view class='nav_tit'>拍摄/上传您的二代身份证</view>
+      <view class='nav_demo' bindtap="cardDemoClick">示例</view>
+    </view>
+    <view class='nav_p'>确保信息真实有效，四角完整，亮度均匀，照片清晰</view>
+  </view>
+  <!-- 身份证 -->
+  <view class="card_con">
+    <view class="card_img card_img1" bindtap="frontimage">
+      <view class="default_img" wx:if="{{isShow1}}">
+        <image src='{{card1}}'></image>
+        <view>点击拍摄/上传人像面</view>
+      </view>
+      <image src="{{idPicPerson}}" mode="aspecFill" class="paths"></image>
+    </view>
+    <view class="card_img card_img2" bindtap="reciteimage">
+      <view class="default_img" wx:if="{{isShow2}}">
+        <image src='{{card2}}'></image>
+        <view>点击拍摄/上传国徽面</view>
+      </view>
+      <image src="{{idPicNation}}" mode="aspecFill" class="paths" />
+    </view>
+  </view>
+  <!-- 同意协议 -->
+  <view class="agree">
+    <view class="agree_checkbox" bindtap="changeState">
+      <image wx:if='{{agreeStatus==true}}' src='{{agree}}'></image>
+      <image wx:else src='{{agreeH}}'></image>
+    </view>
+    <view class='agree_con'>
+      <view class='agree_con_p' bindtap="changeState">我已阅读并同意</view>
+      <view class='agree_con_span' bindtap="introduceJump">《代理人资质查询授权书》</view>
+    </view>
+  </view>
+  <!--  -->
+  <view class='btn_info'>
+    <button class="btn_bg wh69" disabled="{{disabled}}" bindtap="btnclick">提交审核</button>
+  </view>
+  <!-- 示例 -->
+  <view class='dialog_pop' hidden='{{cardScrollBox}}' catchtouchmove='true'>
+    <view class='dialog_bg' catchtouchmove='true'></view>
+    <view class='dialog_con'>
+      <view class='dialog_bao'>
+        <view class='con_card'>
+          <view class='con_tit'>证件上传示例</view>
+          <view class='con_p'>确保信息真实有效，四角完整，亮度均匀，照片清晰</view>
+          <view class='con_article'>
+            <view class='article_left'>人像面</view>
+            <image src='{{default1}}' class='article_right'></image>
+          </view>
+          <view class='con_article'>
+            <view class='article_left'>国徽面</view>
+            <image src='{{default2}}' class='article_right'></image>
+          </view>
+        </view>
+      </view>
+      <view class='dialog_close' bindtap='cardDemoClick'>
+        <image src='{{close}}'></image>
+      </view>
+    </view>
+  </view>
+</view>

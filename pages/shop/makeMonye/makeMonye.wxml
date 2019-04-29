@@ -1,0 +1,7 @@
+<view class="make_money">
+<image src="{{zdqbg1}}" class="zdqbg1"></image>
+<image src="{{zdqbg2}}" class="zdqbg2"></image>
+  <view class="button one"  bindtap="movetorz" wx:if="{{certStatus==20||certStatus==10}}">立即分享 赚取奖励</view>
+  <view class="button one"  bindtap="movetorz" wx:if="{{certStatus!=20&&certStatus!=10}}">立即认证 赚取奖励</view>
+  <view class="button two" bindtap="movetoyq">立即邀请 赚取奖励</view>
+</view>

@@ -1,0 +1,139 @@
+.con {
+  width: 630rpx;
+  padding: 57rpx 60rpx;
+  background: #fff;
+  margin: 0 auto;
+}
+
+.con .image {
+  text-align: center;
+}
+
+.con image {
+  width: 122rpx;
+  height: 122rpx;
+  border-radius: 50%;
+  overflow: hidden;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.con .h1 {
+  font-size: 36rpx;
+  color: #333;
+  text-align: center;
+  padding-top: 13rpx;
+  font-weight: bold;
+}
+
+.con .p {
+  font-size: 26rpx;
+  color: #666;
+  text-align: center;
+  padding-top: 16rpx;
+}
+
+.con .msg {
+  font-size: 28rpx;
+  color: #666;
+  text-align: justify;
+  padding-top: 33rpx;
+}
+
+/*  */
+
+.con2 {
+  width: 630rpx;
+  padding: 65rpx 60rpx 54rpx;
+  background: #fff;
+  margin: 0 auto;
+  border-top: 20rpx solid #f4f4f4;
+}
+
+.con2 .h1 {
+  font-size: 36rpx;
+  color: #333;
+  text-align: left;
+  font-weight: bold;
+  margin-bottom: 54rpx;
+}
+.con2 .h1 image{
+  width: 62rpx;
+  height: 28rpx;
+  vertical-align: middle;
+  margin-left: 16rpx;
+}
+.con2 .ul{
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.con2 .ul .li {
+  margin: 15rpx 10rpx;
+  /* float: left; */
+}
+
+.con2 .ul .li image {
+  /* width: 262rpx;
+  height: 102rpx; */
+  width: 290rpx;
+  height: 106rpx;
+  vertical-align: middle;
+}
+
+/*  */
+
+.con3 {
+  width: 630rpx;
+  padding: 47rpx 60rpx 55.5rpx;
+  background: #fff;
+  margin: 0 auto;
+  border-top: 20rpx solid #f4f4f4;
+}
+
+.con3 .h1 {
+  font-size: 36rpx;
+  color: #333;
+  text-align: left;
+  font-weight: bold;
+  padding-bottom: 31rpx;
+}
+.con3 .h1 image{
+  width: 62rpx;
+  height: 28rpx;
+  vertical-align: middle;
+  margin-left: 16rpx;
+}
+.con3 .ul .li {
+  font-size: 28rpx;
+  color: #333;
+  padding: 21rpx 0;
+  border-bottom: 1px dashed #e5e5e5;
+}
+.con3 .ul .li:last-child{
+  border-bottom: none;
+}
+.con3 .ul .li>view {
+  color: #0274c7;
+  display: inline-block;
+}
+
+.con3 .ol {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 25rpx;
+}
+
+.con3 .ol image {
+  width: 177rpx;
+  height: 177rpx;
+  vertical-align: middle;
+  margin-right: 46rpx;
+}
+
+.con3 .ol .p {
+  font-size: 28rpx;
+  color: #666;
+}

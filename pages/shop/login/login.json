@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "login-control": "/component/logincontrol/logincontrol"
+  },
+  "navigationBarTitleText": "登录视频医生"
+}

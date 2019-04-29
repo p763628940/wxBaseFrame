@@ -1,0 +1,56 @@
+<view class="container">
+  <view class="info_form">
+    <view class="info_list">
+      <view class='info_list_li' bindtap="handleHead">
+        <view class="info_left">头像</view>
+        <view class="info_right">
+          <image class='info_head' src='{{userInfo.avatarUrl}}'></image>
+        </view>
+      </view>
+      <view class='info_list_li' bindtap="handleNickname">
+        <view class="info_left">昵称</view>
+        <view class="info_right">
+          <view wx:if="{{userInfo.nickName!=''}}">{{userInfo.nickName}}</view>
+          <view wx:else>XAB_TGB</view>
+        </view>
+      </view>
+      <view class='info_list_li' bindtap="handleMobile">
+        <view class="info_left">注册手机号</view>
+        <view class="info_right">
+          <view>{{userInfo.mobile}}</view>
+        </view>
+      </view>
+      <view class='info_list_li' bindtap="handleEmail">
+        <view class="info_left">邮箱</view>
+        <view class="info_right">
+          <view wx:if="{{userInfo.email}}">{{userInfo.email}}</view>
+          <view class="span_orange" wx:else>去设置</view>
+        </view>
+      </view>
+    </view>
+    <view class="info_list">
+      <view class='info_list_li' bindtap="handleSert">
+        <view class="info_left">实名认证</view>
+        <view class="info_right">
+          <view class="span_orange">{{userInfo.certStatusName}}</view>
+        </view>
+      </view>
+    </view>
+    <view class="info_list" wx:if="{{userInfo.certStatus==20}}">
+      <view class='info_list_li' bindtap="handleBank">
+        <view class="info_left">银行卡</view>
+        <view class="info_right">
+          <view wx:if="{{userInfo.isSetBankCard == 1}}">{{userInfo.bankName}} 尾号{{cardNum}}</view>
+          <view class="span_orange" wx:else>添加银行卡</view>
+        </view>
+      </view>
+      <view class='info_list_li' wx:if="{{userInfo.isSetBankCard == 1}}" bindtap="handlePassword">
+        <view class="info_left">交易密码</view>
+        <view class="info_right">
+          <view wx:if="{{userInfo.isSetPassWord == 0}}">去设置</view>
+          <view class='span_orange' wx:else>去修改</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

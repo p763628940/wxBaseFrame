@@ -1,0 +1,70 @@
+<!--details.wxml-->
+<view class="box">
+    <image class="top" src="{{details_d}}" wx:if="{{details.productStandard=='daily'}}"></image>
+    <image class="top" src="{{details_m}}" wx:if="{{details.productStandard=='quarter'}}"></image>
+    <image class="top" src="{{details_y}}" wx:if="{{details.productStandard=='year'}}"></image>
+    <view class="btnbox"wx:if="{{!PayShareId}}" bindtap="setlogShow">
+        <image src="{{share}}" class="btnbox_icon"></image>
+        <text class="btnbox_text">推广</text>
+    </view>
+    <view class="details_con">
+        <view class="tit">{{details.productName}}</view>
+        <view class="tit_under">{{details.productDesc}}</view>
+        <view class="details_price_box">
+            <view class="details_price_boxl">¥{{details.productPrice}}元</view>
+            <view class="details_price_boxr" wx:if="{{certStatus==20}}">推广奖励比例{{details.spreadRatio*100}}%</view>
+            <view class="details_price_boxr" wx:if="{{certStatus!=20}}" bindtap="moveToRenzheng2">
+                <view class="details_price_boxr_box">
+                    <text>认证后即可查看推广费</text>
+                    <image src="{{arryeloow}}" class="price_two_img"></image>
+                </view>
+            </view>
+        </view>
+        <view class="line"></view>
+        <view class="tit_box" style="margin-top: 40rpx">
+            <text class="tit_box_text"> 用户须知</text>
+
+            <view class="tit_box_bg"></view>
+        </view>
+        <view class="item" style="margin-top: 31rpx">
+            <view class="iteml_box">
+                <view class="iteml"></view>
+            </view>
+            <view class="itemr">{{details.instructions[0]}}</view>
+        </view>
+        <view class="item">
+            <view class="iteml_box">
+                <view class="iteml"></view>
+            </view>
+
+            <view class="itemr">{{details.instructions[1]}}</view>
+        </view>
+    </view>
+    <view class="bg"></view>
+    <view class="tit_box" style="margin-left: 40rpx;margin-top: 32rpx">
+        <text class="tit_box_text"> 产品介绍</text>
+        <view class="tit_box_bg"></view>
+    </view>
+    <image src="{{details2}}" class="details2"></image>
+    <image src="{{details3}}"  class="details3"></image>
+    <image src="{{details4}}"  class="details4"></image>
+    <image src="{{details5}}"  class="details5"></image>
+    <view class="bg2">
+    </view>
+    <view class="buynow_box" wx:if="{{PayShareId}}">
+    <!--<view class="buynow_box">-->
+        <view class="buynow_btn" bindtap="moveToCardPay">立即购买</view>
+    </view>
+
+
+
+</view>
+<view class="log_warp" wx:if="{{logShow}}">
+    <view class="log_con">
+        <view class="log_con_tit">暂无法分享</view>
+        <view class="log_con_text">您暂未进行实名认证</view>
+        <view class="log_con_btn" bindtap="moveToRenzheng">前往认证</view>
+    </view>
+</view>
+
+

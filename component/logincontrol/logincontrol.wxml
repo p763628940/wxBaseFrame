@@ -1,0 +1,34 @@
+<view class='from_login'>
+  <!-- <form bindsubmit="formSubmit"> -->
+    <view class='form_ul'>
+      <view class='form_li'>
+        <view class='form_li_choice' bindtap='countryJump'>
+          <view>+{{areaCode}}</view>
+          <image src='{{down}}'></image>
+        </view>
+        <view class='form_li_input'>
+          <input type='number' maxlength='11' placeholder='请输入手机号码' placeholder-class='placeholder' value='{{mobile}}' cursor-spacing='200' adjust-position='true' bindinput='watchMobile'></input>
+        </view>
+      </view>
+      <view class='form_li'>
+        <view class='form_li_input'>
+          <input type='number' maxlength='4' placeholder='请输入短信验证码' placeholder-class='placeholder' value='{{authCode}}' cursor-spacing='200' bindinput='watchAuthCode' disabled='{{canGetcode}}'></input>
+        </view>
+        <button bindtap="clickAuthCode"><text>{{userCodeTxt}}</text></button>
+      </view>
+    </view>
+    <!--  -->
+    <button class='login_btn' disabled='{{disabled}}' hover-class="button-hover" bindtap='formSubmit'>{{btnText}}</button>
+    <view class='form_agree'>
+      <view class='agree_radio' bindtap='agreeBtn'>
+        <image src='{{agree}}' hidden='{{agreeIcon}}'></image>
+        <image src='{{agreeHui}}' hidden='{{!agreeIcon}}'></image>
+      </view>
+      <view class='agree_font'>我已同意
+        <view class='agree_font_span' bindtap='platformJump'>平台协议</view>及
+        <view class='agree_font_span' bindtap='privacyJump'>隐私政策</view>
+      </view>
+    </view>
+  <!-- </form> -->
+</view>
+<slot></slot>

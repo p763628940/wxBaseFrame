@@ -1,0 +1,24 @@
+<view class='container'>
+
+  <scroll-view scroll-y="true" style="height:{{height}}px;" class="scroll_view" scroll-into-view="{{toView}}" scroll-with-animation="true">
+    <view class='ul'>
+      <view wx:for-items="{{countryList}}" wx:for-item="item" wx:for-index="index" wx:key="{{index}}">
+        <view class="li_title" wx:if="{{item.type}}" id="{{item.type}}">{{item.type}}</view>
+        <view class="li_box" wx:if="{{!item.type}}" bindtap='countryNumber' data-code='{{item.code}}'>
+          <view class="li">
+            <view wx:if="{{!item.type}}">{{item.name}}</view>
+            <view wx:if="{{!item.type}}" class="code_right">+{{item.code}}</view>
+          </view>
+
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+  <!--  -->
+  <view class='letter'></view>
+
+  <view class="rigth_tap">
+    <view class="rigth_item" hover-class="bg_red" bindtap="setFlag" data-letter="{{item.type}}" wx:for-items="{{countryList}}" wx:for-item="item" wx:for-index="index" wx:key="{{index}}" wx:if="{{item.type}}">{{item.type}}</view>
+  </view>
+
+</view>

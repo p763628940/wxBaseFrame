@@ -1,0 +1,93 @@
+.draw_top {
+  width: 670rpx;
+  padding: 22rpx 40rpx;
+  background: #f9f9f9;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.draw_top_tit {
+  font-size: 26rpx;
+  color: #666;
+  line-height: 37rpx;
+}
+
+.draw_top_screen {
+  display: flex;
+  align-items: center;
+  align-content: center;
+}
+
+.draw_top_screen view {
+  font-size: 28rpx;
+  color: #4b8dfa;
+  line-height: 40rpx;
+}
+
+.draw_top_screen image {
+  width: 25rpx;
+  height: 27rpx;
+  vertical-align: middle;
+  margin-right: 14rpx;
+}
+
+/* .scroll_con {
+  padding-top: 80rpx;
+} */
+
+/* 列表 */
+
+.draw_list {
+  width: 100%;
+  background: #fff;
+  padding-top: 80rpx;
+}
+
+.draw_li {
+  width: 670rpx;
+  height: 130rpx;
+  border-bottom: 1rpx solid #e5e5e5;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40rpx;
+}
+
+.draw_name {
+  font-size: 32rpx;
+  color: #333;
+  line-height: 32rpx;
+}
+
+.draw_date {
+  font-size: 26rpx;
+  color: #999;
+  padding-top: 16rpx;
+}
+
+.draw_price {
+  font-size: 34rpx;
+  color: #ff7b00;
+  line-height: 34rpx;
+}
+
+.draw_status {
+  font-size: 26rpx;
+  color: #999;
+  padding-top: 14rpx;
+  text-align: right;
+}
+
+.color_blue {
+  color: #5458ff;
+}
+
+.color_red {
+  color: #f5524d;
+}

@@ -1,0 +1,42 @@
+.make_money{
+  width:750rpx;
+  padding-bottom: 40rpx;
+background: #eb2929;
+
+position: relative;
+
+  height:2203rpx;
+}
+.zdqbg1{
+  width: 750rpx;
+  height: 1360rpx;
+}
+.zdqbg2{
+  margin: 0 auto;
+  margin-top: 10rpx;
+  width: 690rpx;
+  height: 833rpx;
+
+}
+.button{
+  position: absolute;
+  width:570rpx;
+  height:94rpx;
+  background:rgba(252,91,92,1);
+  border-radius:47rpx;
+  text-align: center;
+  line-height: 94rpx;
+  font-size:32rpx;
+  font-weight:400;
+  color:rgba(255,255,255,1);
+
+
+}
+.one {
+  top: 1219rpx;
+  left: 90rpx;
+}
+.two {
+  bottom:89rpx;
+  left: 90rpx;
+}

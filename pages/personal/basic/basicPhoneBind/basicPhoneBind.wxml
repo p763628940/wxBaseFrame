@@ -1,0 +1,19 @@
+<view class="container">
+  <view class='info_top'>请输入手机{{mobile}}收到的手机验证码</view>
+  <view class="info_form">
+    <view class='info_form_ul'>
+      <view class='info_form_li'>
+        <view class='li_tit'>验证码</view>
+        <view class='li_input'>
+          <input type='number' placeholder="请输入手机短信验证码" placeholder-class='placeholder' maxlength='4' value='{{verifyCode}}' bindinput='verifyWatch'></input>
+        </view>
+        <view class="li_verify">
+          <button type="button" disabled="{{disabledSend}}" bindtap="sendCode">{{userCodeTxt}}</button>
+        </view>
+      </view>
+    </view>
+    <view class="info_btn">
+      <button class="btn_bg wh69 mt70" disabled="{{disabled}}" bindtap="handleMobile">下一步</button>
+    </view>
+  </view>
+</view>

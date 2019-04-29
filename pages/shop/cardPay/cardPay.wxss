@@ -1,0 +1,326 @@
+.pay_card {
+  width: 640rpx;
+  margin: 0 auto;
+}
+
+.types_ul {
+  width: 640rpx;
+  margin: 50rpx auto 0;
+  border-radius: 20rpx;
+  position: relative;
+  overflow: hidden;
+}
+
+.types_li {
+  padding: 0 30rpx 27rpx 30rpx;
+}
+
+.tit_h1 {
+  font-size: 36rpx;
+  color: rgba(255, 255, 255, 1);
+  padding-top: 38rpx;
+}
+
+.tit_date {
+  font-size: 26rpx;
+  color: rgba(255, 255, 255, 1);
+  padding-top: 9rpx;
+}
+
+.tit_price {
+  display: flex;
+  /* align-items: baseline; */
+  align-content: center;
+}
+
+.price_cost {
+  font-size: 84rpx;
+  color: rgba(255, 255, 255, 1);
+  display: flex;
+  align-items: baseline;
+  letter-spacing: -4rpx;
+}
+
+.price_cost view {
+  font-size: 41rpx;
+  color: #fff;
+}
+
+.price_now {
+  margin-left: 24rpx;
+  font-size: 28rpx;
+  color: rgba(255, 255, 255, 1);
+  text-decoration: line-through;
+  line-height: 40rpx;
+  margin-top: 50rpx;
+}
+
+/*  */
+
+.buy_num {
+  margin-top: 75rpx;
+}
+
+.med_tit {
+  width: 100%;
+  position: relative;
+  margin-top: 34rpx;
+  padding-bottom: 8rpx;
+}
+
+.med_tit .tit_h {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #333;
+  text-align: left;
+  position: relative;
+  z-index: 2;
+}
+
+.med_tit .tit_span {
+  width: 144rpx;
+  height: 20rpx;
+  background: #ecf3ff;
+  position: absolute;
+  bottom: 0rpx;
+  z-index: 1;
+}
+
+.buy_con {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(229, 229, 229, 1);
+  padding-bottom: 30rpx;
+  margin-top: 30rpx;
+}
+
+.con_price {
+  font-size: 54rpx;
+  font-weight: bold;
+  color: rgba(248, 92, 88, 1);
+  display: flex;
+  align-items: baseline;
+}
+
+.con_price view {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: rgba(248, 92, 88, 1);
+}
+
+.con_num {
+  display: flex;
+  align-items: center;
+}
+
+.con_num input {
+  width: 72rpx;
+  height: 49rpx;
+  background: rgba(238, 238, 238, 1);
+  font-size: 34rpx;
+  color: rgba(68, 68, 68, 1);
+  text-align: center;
+}
+.reduce{
+  padding: 30rpx;
+}
+.add{
+  padding: 30rpx 0 30rpx 30rpx;
+}
+.reduce image{
+  width: 24rpx;
+  height: 24rpx;
+}
+
+.add image{
+  width: 24rpx;
+  height: 24rpx;
+}
+
+/*  */
+
+.pay_mode {
+  margin-top: 82rpx;
+}
+
+.mode_con {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(229, 229, 229, 1);
+  padding-bottom: 30rpx;
+  margin-top: 64rpx;
+}
+
+.mode_left {
+  font-size: 26rpx;
+  color: rgba(136, 136, 136, 1);
+  display: flex;
+  align-items: center;
+}
+
+.mode_left image {
+  width: 57rpx;
+  height: 46rpx;
+  margin-right: 24rpx;
+}
+
+.mode_right {
+  width: 40rpx;
+  height: 40rpx;
+  border: 3rpx solid #3F86FF;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+
+.mode_right view {
+  width: 20rpx;
+  height: 20rpx;
+  background: #3F86FF;
+  border-radius: 50%;
+  margin: 10rpx;
+}
+
+/*  */
+
+.pay_fixed {
+  width: 750rpx;
+  height: 100rpx;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 1);
+  border: 1rpx solid rgba(233, 233, 233, 1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pay_fixed .pay_all {
+  width: 440rpx;
+  font-size: 36rpx;
+  color: rgba(68, 68, 68, 1);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pay_all view{
+ font-weight: bold;
+ font-size: 36rpx;
+  color: rgba(68, 68, 68, 1);
+}
+.pay_fixed button {
+  width: 310rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  background: linear-gradient(270deg, rgba(63, 134, 255, 1) 0%, rgba(63, 134, 255, 1) 100%);
+  font-size: 36rpx;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 1);
+  border-radius: 0;
+}
+
+
+
+
+.card_date {
+  background: linear-gradient(315deg, rgba(122, 195, 253, 1) 0%, rgba(100, 169, 237, 1) 100%);
+  border-radius: 20rpx;
+  box-shadow: 0px 4px 10px 0px rgba(40, 94, 117, 0.3);
+}
+
+.card_date_bg {
+  background: url('https://aimall.zhongyuanib.com/static/ai/active/videoMini/card_bg1.png') no-repeat;
+  background-size: 100%;
+  z-index: 1;
+  height: 100%;
+}
+
+.card_date_bg2 {
+  background: url('https://aimall.zhongyuanib.com/static/ai/active/videoMini/card_bg4.png') no-repeat;
+  background-size: 100%;
+  z-index: 1;
+}
+
+.card_date_status {
+  width: 130rpx;
+  height: 99rpx;
+  background: url('https://aimall.zhongyuanib.com/static/ai/active/videoMini/status1.png') no-repeat;
+  background-size: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.status_date {
+  background: #6194EB;
+}
+.btn_date {
+  color: #728FB0;
+}
+/* 季卡 */
+
+.card_month {
+  background: linear-gradient(130deg, rgba(168, 156, 207, 1) 0%, rgba(214, 203, 237, 1) 100%);
+  border-radius: 20rpx;
+  box-shadow: 0px 4px 10px 0px rgba(99, 40, 117, 0.3);
+}
+
+.card_month_bg {
+  background: url('https://aimall.zhongyuanib.com/static/ai/active/videoMini/card_bg2.png') no-repeat;
+  background-size: 100%;
+  z-index: 1;
+  height: 100%;
+}
+
+.card_month_status {
+  width: 130rpx;
+  height: 99rpx;
+  background: url('https://aimall.zhongyuanib.com/static/ai/active/videoMini/status2.png') no-repeat;
+  background-size: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.status_month {
+  background: #9D7DD0;
+}
+.btn_month {
+  color: rgba(146, 134, 184, 1);
+}
+
+/*年卡 */
+
+.card_year {
+  background: linear-gradient(96deg, rgba(152, 159, 218, 1) 0%, rgba(188, 198, 247, 1) 100%);
+  border-radius: 20rpx;
+  box-shadow: 0px 4px 10px 0px rgba(63, 67, 215, 0.3);
+}
+
+.card_year_bg {
+  background: url('https://aimall.zhongyuanib.com/static/ai/active/videoMini/card_bg3.png') no-repeat;
+  background-size: 100%;
+  z-index: 1;
+  height: 100%;
+}
+
+.card_year_status {
+  width: 130rpx;
+  height: 99rpx;
+  background: url('https://aimall.zhongyuanib.com/static/ai/active/videoMini/status3.png') no-repeat;
+  background-size: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.status_year {
+  background: #7D85D0;
+}
+.btn_year {
+  color: rgba(146, 134, 184, 1);
+}

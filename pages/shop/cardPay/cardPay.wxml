@@ -1,0 +1,67 @@
+<view class='container'>
+  <view class='pay_card'>
+    <view class="types_ul {{cardDetail.productStandard=='daily'?'card_date':''}}{{cardDetail.productStandard=='quarter'?'card_month':''}}{{cardDetail.productStandard=='year'?'card_year':''}}">
+      <view class="ul_status {{cardDetail.productStandard=='daily'?'card_date_status':''}} {{cardDetail.productStandard=='quarter'?'card_month_status':''}}{{cardDetail.productStandard=='year'?'card_year_status':''}}">
+        <view>{{cardDetail.productStandardName}}</view>
+      </view>
+      <view class="types_li {{cardDetail.productStandard=='daily'?'card_date_bg':''}} {{cardDetail.productStandard=='quarter'?'card_month_bg':''}} {{cardDetail.productStandard=='year'?'card_year_bg':''}}">
+        <view class='tit_h1'>{{cardDetail.productName}}</view>
+        <view class='tit_date'>{{cardDetail.productDesc}}</view>
+        <view class='tit_price'>
+          <view class='price_cost'>
+            <view>¥</view>{{cardDetail.productPrice}}
+          </view>
+          <view class='price_now' wx:if="{{cardDetail.productPrice<cardDetail.productOrginalPrice}}">
+            原价￥{{cardDetail.productOrginalPrice}}
+          </view>
+        </view>
+      </view>
+
+    </view>
+    <!--  -->
+    <view class='buy_num'>
+      <view class='med_tit'>
+        <view class='tit_h'>购买数量</view>
+        <view class='tit_span'></view>
+      </view>
+      <view class='buy_con'>
+        <view class='con_price'>
+          <view>￥</view>{{cardDetail.productPrice}}
+        </view>
+        <view class='con_num'>
+          <view class='reduce' bindtap='minusItemCount'>
+            <image src='{{minus}}'></image>
+          </view>
+          <input value='{{itemCount}}' type="number" bindchange='bindItemCountInput'></input>
+          <view class='add' bindtap='addItemCount'>
+            <image src='{{pushsActive}}'></image>
+          </view>
+        </view>
+      </view>
+    </view>
+    <!--  -->
+    <view class='pay_mode'>
+      <view class='med_tit'>
+        <view class='tit_h'>支付方式</view>
+        <view class='tit_span'></view>
+      </view>
+      <view class='mode_con'>
+        <view class='mode_left'>
+          <image src='{{wxIcon}}'></image>微信支付
+        </view>
+        <!-- <checkbox id="2" checked="true" /> -->
+        <view class='mode_right'>
+          <view></view>
+        </view>
+      </view>
+    </view>
+    <!-- 底部按钮 -->
+    <view class='pay_fixed'>
+      <view class='pay_all'>合计：
+        <view>￥{{amount}}</view>
+      </view>
+      <button disabled='{{payDisabled}}' bindtap='entryPayMiniProgramPage' data-item-id="{{cardDetail.partnerItemId}}" data-item-price="{{unitPrice}}" data-item-count="{{itemCount}}" data-amount="{{amount}}" data-status='{{cardDetail.productStandard}}'>去支付({{itemCount}})
+      </button>
+    </view>
+  </view>
+</view>

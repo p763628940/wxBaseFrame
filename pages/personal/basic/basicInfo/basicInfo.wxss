@@ -1,0 +1,91 @@
+page {
+  width: 100%;
+  background: #f4f4f4;
+}
+
+.container {
+  width: 100%;
+  border-top: 1rpx solid #e5e5e5;
+}
+
+.info_form {
+  margin-top: 20rpx;
+}
+
+.info_list {
+  margin-bottom: 20rpx;
+}
+
+.info_list_li {
+  width: 690rpx;
+  background: #fff;
+  padding: 0 30rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1rpx solid #e5e5e5;
+}
+
+.info_list_li:last-child {
+  border-bottom: none;
+}
+
+.info_list_li>view {
+  font-size: 30rpx;
+  color: #333;
+  line-height: 100rpx;
+  display: flex;
+  align-items: center;
+}
+
+.info_list_li>view view {
+  font-size: 30rpx;
+  color: #333;
+  line-height: 100rpx;
+  margin-right: 20rpx;
+}
+
+.info_list_li>view image {
+  width: 60rpx;
+  height: 60rpx;
+  min-width: 60rpx;
+  min-height: 60rpx;
+  border-radius: 50%;
+  overflow: hidden;
+  display: inline-block;
+  margin-right: 20rpx;
+}
+.info_head{
+  width: 60rpx;
+  height: 60rpx;
+  min-width: 60rpx;
+  min-height: 60rpx;
+  background: url("https://xiaoaires.aibao.com/commissionReturn/icon/head.png") no-repeat;
+  background-size: cover;
+}
+.info_list_li>view .span_orange {
+  color: #ff7b00;
+}
+
+.info_list_li>view .span_red {
+  color: #f5524d;
+}
+
+.info_right {
+  position: relative;
+  padding-right: 12rpx;
+  height: 100rpx;
+}
+
+.info_right::after {
+  content: '';
+  position: absolute;
+  width: 12rpx;
+  height: 24rpx;
+  top: 38rpx;
+  right: 0rpx;
+  background: url("https://xiaoaires.aibao.com/commissionReturn/icon/left_hui.png") no-repeat;
+  background-size: 100% auto;
+}

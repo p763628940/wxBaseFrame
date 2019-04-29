@@ -1,0 +1,50 @@
+<view class="container">
+  <view class="draw_top">
+    <view class="draw_top_tit">提现累计{{totalCash}}元</view>
+    <view class="draw_top_screen">
+      <image src='{{screen}}'></image>
+      <picker mode="multiSelector" value="{{dateTime}}" bindchange="changeDateTime" range="{{dateTimeArray}}">
+        <view class="picker">
+          {{conditionText}}
+        </view>
+      </picker>
+    </view>
+  </view>
+  <!-- 列表 -->
+  <scroll-view class='scroll_con' scroll-y style='height:{{scrollHeight}}px' bindscrolltolower="scrollLower" scroll-with-animation='true' wx:if='{{dataList.length!=0}}'>
+    <view class="draw_list">
+      <view class='draw_ul'>
+        <view class='draw_li' wx:for="{{dataList}}" wx:for-item="item" wx:for-index="index" wx:key="index">
+          <view class="draw_li_left">
+            <view class="draw_name">{{item.cashTypeName}}</view>
+            <view class="draw_date">{{item.rcd_mod_time}}</view>
+          </view>
+          <view class="draw_li_right">
+            <view class="draw_price">{{item.cash}}</view>
+            <view class="draw_status {{item.status=='处理中'?'color_blue':''}} {{item.status=='失败'?'color_red':''}}">{{item.status}}</view>
+          </view>
+        </view>
+      </view>
+      <view class='no_product' wx:if='{{loadingDom}}'>
+        <view class="loader">
+          <view class="loader-inner ball-spin-fade-loader">
+            <view></view>
+            <view></view>
+            <view></view>
+            <view></view>
+            <view></view>
+            <view></view>
+            <view></view>
+            <view></view>
+          </view>
+        </view>
+        <view>加载中</view>
+      </view>
+      <view class='no_product' wx:if='{{noMoreShow}}'>没有更多数据了</view>
+    </view>
+  </scroll-view>
+  <view class="draw_null" wx:else>
+    <image src='{{empty}}'></image>
+    <view>没有提现记录哦~</view>
+  </view>
+</view>

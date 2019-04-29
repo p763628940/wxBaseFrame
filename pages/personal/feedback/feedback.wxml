@@ -1,0 +1,11 @@
+<view class='container'>
+  <form bindsubmit="formSubmit">
+    <view class='feedback_con'>
+      <textarea name='feedwords' maxlength='300' placeholder='您有什么想法和意见，都可以告诉我们' placeholder-class='placeholder' value='{{textareaValue}}' bindinput='textareaMonitor'></textarea>
+      <view class='p'><view class='colorBlue'>{{fontNum}}</view><view>/300</view></view>
+    </view>
+    <input name='phonemail' type='text' placeholder='请输入手机号或邮箱（选填）' placeholder-class='placeholder' value='{{inputValue}}' bindinput='inputMonitor'></input>
+    <button formType="submit">提交反馈</button>
+    <view class='dialing'>小爱保客服：<view bindtap='dialingClick'>010-87152976</view></view>
+  </form>
+</view>

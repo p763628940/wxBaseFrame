@@ -1,0 +1,35 @@
+<view class="container">
+  <view class="top_banner">
+    <view class="banner_left">
+      <view class="score_tit">可提现(元)</view>
+      <view class="score_num">{{accountInfo.inWithdrawCash}}</view>
+    </view>
+    <view class="banner_right" bindtap="drawListJump">提现记录</view>
+  </view>
+  <view class="score_con">
+    <view class='score_con_p'>
+      <view>本月剩余免费提现</view>
+      <view class='score_con_span'>{{accountInfo.freeWithdrawTime}}次</view>
+      <view>(总免费次数3次)</view>
+    </view>
+    <button class="btn_bg wh69 mt70" bindtap="handleDraw">提现</button>
+  </view>
+  <!--暂无法体现-->
+  <!-- 确认取消弹窗 -->
+  <view class='modal_pop' catchtouchmove='true' wx:if='{{modalPopShow}}'>
+    <view class="modal_mask" bindtap="publicCancel" catchtouchmove='true'></view>
+    <view class="modal_dialog">
+      <view class="modal_title">{{modalTitle}}</view>
+      <text class="modal_con" wx:if="{{modalContent!=''}}">{{modalContent}}</text>
+      <view class="modal_con" wx:if="{{modalContentShow==true}}">
+        <view>每月免费提现次数已用完，</view>
+        <view>提现将收取
+          <text class='color_orange'>2元</text>手续费</view>
+      </view>
+      <view class="modal_footer">
+        <view class="btn_cancel" wx:if='{{cancelHide}}' bindtap="publicCancel" data-status="cancel">{{modalCancel}}</view>
+        <view class="btn_confirm" wx:if='{{confirmHide}}' bindtap="publicConfirm" data-status="confirm">{{modalConfirm}}</view>
+      </view>
+    </view>
+  </view>
+</view>

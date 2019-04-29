@@ -1,0 +1,4 @@
+@import '../basicName/basicName';
+.info_form_top{
+  border-top: 1rpx solid #e5e5e5;
+}

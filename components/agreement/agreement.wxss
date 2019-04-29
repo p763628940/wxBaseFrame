@@ -1,0 +1,23 @@
+.container {
+  width: 100%;
+  height: auto;
+  position: relative;
+  z-index: 2;
+}
+
+.h1 {
+  font-size: 48rpx;
+  color: #333;
+  padding-top: 30rpx;
+  padding-bottom: 20rpx;
+  text-align: center;
+}
+
+text {
+  width:92%;
+  margin: 0 auto;
+  font-size: 28rpx;
+  color: #666;
+  line-height: 40rpx;
+  padding: 20rpx 0 50rpx 0;
+}

@@ -1,0 +1,181 @@
+page {
+  background: #F4F4F4;
+}
+
+.revenue_top {
+  width: 100%;
+  border-top: 1rpx solid #e5e5e5;
+  border-bottom: 1rpx solid #e5e5e5;
+  background: #fff;
+  position: fixed;
+  top:0;
+  left: 0;
+  z-index: 100;
+}
+
+.revenue_top_ul {
+  width: 100%;
+  height: 88rpx;
+  line-height: 88rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.revenue_top_li {
+  width: 33.3%;
+  text-align: center;
+  position: relative;
+  line-height: 88rpx;
+}
+
+.revenue_top_li image {
+  width: 22rpx;
+  height: 12rpx;
+  display: inline-block;
+  position: absolute;
+  right: 30rpx;
+  top: 40rpx;
+}
+
+.revenue_picker {
+  font-size: 30rpx;
+  color: rgba(153, 153, 153, 1);
+}
+
+.revenue_top_li.active .revenue_picker {
+  color: #5458ff;
+}
+
+.revenue_top_li.active .revenue_top_span {
+  width: 40rpx;
+  height: 8rpx;
+  background: #5d5aef;
+  border-radius: 3rpx;
+  overflow: hidden;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -20rpx;
+}
+
+/* 累计收入 */
+
+.revenue_total {
+  width: 670rpx;
+  font-size: 26rpx;
+  color: #666;
+  line-height: 37rpx;
+  padding: 22rpx 40rpx;
+  text-align: left;
+  background: #F4F4F4;
+  position: fixed;
+  top:88rpx;
+  left: 0;
+  z-index: 100;
+}
+/* .scroll_con{
+  margin-top: 165rpx;
+} */
+/* 列表 */
+
+.revenue_list {
+  width: 100%;
+  /* margin-bottom: 38rpx; */
+  padding-top: 165rpx;
+}
+
+.revenue_list_ul {
+  position: relative;
+}
+
+.revenue_list_li {
+  background: #fff;
+  padding: 40rpx 0;
+  margin-bottom: 20rpx;
+  position: relative;
+}
+
+.list_top {
+  /* display: -webkit-box;
+  -webkit-box-pack: justify;
+  -webkit-box-align: center; */
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  border-bottom: 1rpx solid #e5e5e5;
+  padding: 0 40rpx 26rpx;
+}
+
+.list_tit {
+  font-size: 30rpx;
+  font-weight: bold;
+  color: #333;
+  line-height: 40rpx;
+}
+
+.list_p {
+  font-size: 26rpx;
+  color: #666;
+  line-height: 37rpx;
+  padding-top: 17rpx;
+}
+
+.list_top_right {
+  text-align: right;
+}
+
+.revenue_price {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #ff7b00;
+  line-height: 45rpx;
+}
+
+.revenue_status {
+  font-size: 24rpx;
+  color: #666;
+  line-height: 33rpx;
+  padding-top: 14rpx;
+}
+
+.blue_status {
+  color: #4b8dfa;
+}
+
+.red_status {
+  color: #f5524d;
+}
+
+.list_bottom {
+  padding: 18rpx 40rpx 0;
+}
+
+.list_bottom>view {
+  display: -webkit-box;
+  -webkit-box-align: center;
+  padding-top: 12rpx;
+}
+
+.list_bottom_p {
+  min-width: 140rpx;
+  font-size: 28rpx;
+  color: #666;
+  line-height: 40rpx;
+}
+
+.list_bottom_span {
+  font-size: 28rpx;
+  color: #333;
+  line-height: 40rpx;
+  display: block;
+}
+
+.color_block {
+  width: 12rpx;
+  height: 33rpx;
+  background: #5458ff;
+  position: absolute;
+  top: 40rpx;
+  left: 0;
+}
